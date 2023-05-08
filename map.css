@@ -1,3 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 body {
     overflow: hidden;
-}
+  }
+  
+  .map-image-container {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 90px);
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .map-image-container img {
+    min-height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .map-zoom-btn-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+
+  .zoom-btn-in, .zoom-btn-out {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
