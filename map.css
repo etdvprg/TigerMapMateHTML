@@ -34,3 +34,25 @@ body {
     border-radius: 4px;
     cursor: pointer;
   }
+
+  .map-toggles {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-toggle-btn {
+    margin-bottom: 10px;
+  }
+  
+
+  .map-toggles .map-toggle-btn img {
+    width: 25px;
+    height: 25px;
+
+  }
+  
+  
