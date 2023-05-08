@@ -105,3 +105,14 @@
     font-stretch: normal;
     text-decoration: none;
 }
+
+#newsfeed-title {
+    display: flex;
+    
+    width: 600px;
+    height: 100px;
+    left: 50%;
+    transform: translate(50%, 38%);
+    background-color: rgb(235, 221, 102);
+    border-radius: 12px;
+}
