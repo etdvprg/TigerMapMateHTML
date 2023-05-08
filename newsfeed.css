@@ -1,46 +1,90 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 .feed-container {
     top: 60px;
-    left: -10px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 1480px;
     height: 900px;
-    display: flex;
+    
+    flex-direction: column;
+    gap: 2em;
     padding: 29px 92px;
     position: relative;
     box-shadow: 20px 20px 4px 0px rgba(0, 0, 0, 0.25) ;
     box-sizing: content-box;
-    justify-content: flex-start;
-    flex-shrink: 0;
+    justify-content: space-between;
+    
     border-radius: 18px;
     background-color: rgba(255, 255, 255, 1);
 }
 
-.feedbox-container {
-    transform: translateX(-50%);
+.feedbox-part {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: 2em;
+    flex-direction: row;
+    align-items: center;
+}
+
+.feed-mini-news {
+    display: flex;
+    
+    flex-shrink: 0;
+    gap: 2em;
+
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    top: 0;
-    left: 1%;
-    width: 180px;
-    height: 200px;
+}
+
+.feedbox-mini-container {
+    transform: translateX(0) translateY(5%);
+
+    left: 0;
+    width: 220px;
+    height: 100px;
     display: flex;
-    /* padding: 50px 9px; */
-    margin-right: 20px;
-    /* padding-right: 10px; */
     position: relative;
     box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25) ;
     box-sizing: content-box;
-    align-items: center;
+
+    /* align-items: center; */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
     flex-shrink: 0;
     border-radius: 12px;
+    
+    
+    background-color: rgb(235, 221, 102);
+}
+
+.feedbox-container {
+    transform: translateX(0) translateY(-5%);
+
+    width: 180px;
+    height: 220px;
+    display: flex;
+    position: relative;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25) ;
+    box-sizing: content-box;
+    
+    flex-shrink: 0;
+    border-radius: 12px;
+    gap: 1em;
+
+    align-items: center;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     background-color: rgb(235, 221, 102);
 }
 
 .feedbox-image {
     top: 15px;
-    /* left: 10px; */
     width: 133.142px;
     height: 88.857;
     position: relative;
@@ -48,7 +92,6 @@
 }
 
 .feed-text{
-    top: 10px;
     left: 10px;
     color: rgb(29, 29, 29);
     height: auto;
@@ -61,4 +104,22 @@
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
+}
+
+#newsfeed-title {
+    display: flex;
+    
+    width: 400px;
+    height: 75px;
+    left: 50%;
+    transform: translate(400px, 38%);
+    background-color: rgb(235, 221, 102);
+    border-radius: 12px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#title-text {
+    font-family: "Poppins", sans-serif;
 }
