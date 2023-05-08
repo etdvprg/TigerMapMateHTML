@@ -39,24 +39,41 @@ body {
 
   .map-toggles {
     position: absolute;
+    width: 50px;
+    height: 210px;
     top: 100px;
     right: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    box-sizing: content-box;
     align-items: center;
-  }
-
-  .map-toggle-btn {
-    margin-bottom: 10px;
+    background-color: #F8F2F2;
+    z-index: 2;
+    }
+  
+  .map-toggle-btn:hover,
+  .map-toggle-btn:focus {
+    background-color: #eee;
   }
   
-
-  .map-toggles .map-toggle-btn img {
-    width: 25px;
-    height: 25px;
-
+  .map-toggle-btn {
+    position: inherit;
+    display: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
   }
-
+  
+  .map-toggle-btn img {
+    display: inherit;
+    width: 100%;
+    height: auto;
+  }
+  
+  
   .commute-menu {
     top: 120px;
     left: 10px;
