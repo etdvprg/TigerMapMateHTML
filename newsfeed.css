@@ -31,14 +31,15 @@
     flex-shrink: 0;
     gap: 2em;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .feedbox-mini-container {
-    transform: translateX(-50%);
+    transform: translateX(-40%) translateY(5%);
 
     align-self: center;
     left: 1%;
-    width: 200px;
+    width: 220px;
     height: 100px;
     display: flex;
     position: relative;
@@ -57,7 +58,7 @@
 }
 
 .feedbox-container {
-    transform: translateX(-50%);
+    transform: translateX(-40%) translateY(-5%);
 
     top: 0;
     left: 1%;
@@ -80,7 +81,6 @@
 
 .feedbox-image {
     top: 15px;
-    /* left: 10px; */
     width: 133.142px;
     height: 88.857;
     position: relative;
