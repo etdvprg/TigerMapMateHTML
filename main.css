@@ -149,16 +149,16 @@ header {
 }
 
 .login-container {
-    left: 50%;
+    left: 70%;
     transform: translateX(-50%);
     justify-content: center;
     align-items: center;
-    top: 50px;
+    top: 25%;
     width: 400px;
-    height: 700px;
+    height: 400px;
     display: flex;
     padding: 21px 9px;
-    position: relative;
+    position: absolute;
     box-shadow: 20px 20px 4px 0px rgba(0, 0, 0, 0.25) ;
     box-sizing: content-box;
     align-items: center;
@@ -196,8 +196,12 @@ header {
 
 
 .login-tmm-logo-img {
-    height: 200px;
-    width: 200px;
+    transform: translateX(50%) translateY(50%);
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    height: 300px;
+    width: 300px;
 }
 
 .login-email-textbox input[type="email"] {
