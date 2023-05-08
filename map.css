@@ -2,6 +2,8 @@
 
 body {
     overflow: hidden;
+    font-family: "Poppins", sans-serif;
+
   }
   
   .map-image-container {
@@ -54,5 +56,93 @@ body {
     height: 25px;
 
   }
+
+  .commute-menu {
+    top: 120px;
+    left: 10px;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    position: absolute;
+    border-radius: 41px;
+    background-color: rgba(255, 255, 255, 1);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    flex-direction: column;
+    z-index: 2;
+  }
+  
+  .commute-route-selection {
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 50px;
+   margin-bottom: auto;
+  }
+  
+  .commute-dropdown-button {
+    position: relative;
+    width: 300px;
+    display: flex;
+    opacity: 0.4;
+    padding: 21px 9px;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.12999999523162842) ;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 24px;
+    justify-content: space-between;
+    background-color: rgba(75, 75, 75, 0.5600000023841858);
+    height: auto;
+    margin-top: auto;
+    margin-bottom: 75px;
+    cursor: pointer;
+  }
+  
+  .commute-dropdown-container {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    width: 300px;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.13);
+    border-radius: 24px;
+    margin-top: 280px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    display: none;
+  }
+  
+  .commute-dropdown-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .commute-dropdown-container li {
+    padding: 15px;
+    cursor: pointer;
+  }
+  
+  .commute-dropdown-container li:hover {
+    background-color: rgba(75, 75, 75, 0.56);
+  }
+  
+  .commute-dropdown-container a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .commute-dropdown-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .commute-dropdown.show .commute-dropdown-container {
+    display: block;
+  }
+
+  .commute-dropdown-container.visible {
+    display: block;
+  }
+  
   
   
