@@ -5,5 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
     button.addEventListener('click', function() {
         container.classList.toggle('visible');
     });
-  });
+});
+
   

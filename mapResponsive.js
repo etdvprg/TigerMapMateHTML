@@ -13,5 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
       scale -= 0.1;
       mapImage.style.transform = `scale(${scale})`;
     });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const commuteDropdownButton = document.querySelector(".commute-dropdown-button");
+  const commuteDropdown = document.querySelector(".commute-dropdown-container");
+
+  commuteDropdownButton.addEventListener("click", function() {
+  commuteDropdown.classList.toggle("visible");
   });
-  
+});
