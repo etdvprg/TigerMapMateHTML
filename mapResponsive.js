@@ -32,3 +32,14 @@ document.addEventListener("DOMContentLoaded", function() {
     pnrRouteDropdown.classList.toggle("visible");
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const searchBar = document.querySelector(".ust-b-menu-search-bar input[type='text']");
+  
+  searchBar.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      window.location.href = "ust-buildings-list.html";
+    }
+  });
+});
