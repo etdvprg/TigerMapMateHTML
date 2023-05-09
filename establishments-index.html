@@ -10,6 +10,16 @@
     <link rel="stylesheet" type="text/css" href="map.css">
     <script src="navBtnResponsive.js"></script>
     <script src="mapResponsive.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const circle = document.querySelector('.e-icon');
+
+        circle.addEventListener('click', function() {
+        localStorage.setItem('isCircleSelected', true);
+        window.location.href = 'establishments-list-restaurants.html';
+  });
+});
+    </script>
 </head>
 <body>
     <header>
@@ -59,9 +69,11 @@
       <div class="ust-e-menu-text">Establishments</div>
       <div class="ust-e-navbar">
         <div class="ust-e-navbar">
-          <div class="e-icon restaurants">
-            <img src="images/restaurant.png" alt="Restaurants">
-          </div>
+          <a href="establishments-list-restraurants.html">
+            <div class="e-icon restaurants">
+              <img src="images/restaurant.png" alt="Restaurants">
+            </div>
+          </a>
           <div class="e-icon groceries">
             <img src="images/grocery.png" alt="Grocery">
           </div>

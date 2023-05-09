@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger MapMate</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="map.css">
+    <script src="navBtnResponsive.js"></script>
+    <script src="mapResponsive.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  const circle = document.querySelector('.e-icon');
+
+  if (localStorage.getItem('isCircleSelected') === 'true') {
+    circle.style.backgroundColor = 'grey';
+  } else {
+    circle.style.backgroundColor = '#F4C01E';
+  }
+});
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img class ="navbar-logo" src="images/logo.png">
+            </a>
+            <ul class="navbar-nav">
+                <div class="navbar-button" id="navbar-button">
+                    <span class="nav-text2">Explore the University!</span>
+                  </div>
+                  
+                  <div class="nav-dropdown-container" id="nav-dropdown-container">
+                    <ul>
+                      <li><a href="index.html">Map</a></li>
+                      <li><a href="#">Settings</a></li>
+                      <li><a href="#">Schedule</a></li>
+                      <li><a href="#">Newsfeed</a></li>
+                    </ul>
+                  </div>
+                  
+                <a href ="login-page.html">
+                    <div class="nav-profile-container">
+                        <span class="nav-text1">Guest</span>
+                        <div class="nav-profile-pfp">
+                            <img class="profile-picture" src="images/tigerDP.png" class="nav-link"></a>
+                        </div>
+                    </div>
+                </a>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="map-image-container">
+        <img class = "map-image" src="images/MarkedMap.png" alt="Map Image">
+    </div>
+
+    <div class="map-toggles">
+        <a href="commute-index.html"><button class="map-toggle-btn"><img src="images/commute.png" alt="Commute"></button></a>
+        <a href="school-index.html"><button class="map-toggle-btn"><img src="images/school.png" alt="School"></button></a>
+        <a href="hotspots-index.html"><button class="map-toggle-btn"><img src="images/hotspot.png" alt="Hotspot"></button></a>
+        <a href="bookmarks-index.html"><button class="map-toggle-btn"><img src="images/bookmark.png" alt="Bookmark"></button></a>
+    </div>
+
+    <div class="ust-e-menu-container">
+      <a href="establishments-index.html">
+        <div class="back-button-e">
+            <img class="vector-toLeft" src="images/vector.svg" class="nav-link">
+        </div>
+    </a>
+      <div class="ust-e-menu-text">Establishments</div>
+      <div class="ust-e-navbar">
+        <div class="ust-e-navbar">
+          <div class="e-icon restaurants">
+            <img src="images/restaurant.png" alt="Restaurants">
+          </div>
+          <div class="e-icon groceries">
+            <img src="images/grocery.png" alt="Grocery">
+          </div>
+          <div class="e-icon study-spots">
+            <img src="images/study-spots.png" alt="Study Spots">
+          </div>
+          <div class="e-icon recreational-spots">
+            <img src="images/recreational-spots.png" alt="Recreational Spots">
+          </div>
+        </div>
+      </div>
+
+      <div class="ust-e-menu-search-bar">
+        <input type="text" placeholder="Search...">
+      </div>
+
+
+      <div class="ust-b-menu-list">
+        <div class="ust-b-list result-1">
+          <div class="ust-b-list-tx text-1"> Blessed Giorgio Frassati Building </div>
+        </div>
+        <div class="ust-b-list result-1">
+          <div class="ust-b-list-tx text-1"> Blessed Giorgio Frassati Building </div>
+        </div>
+        
+      </div>
+    </div>
+      
+      <div class="map-zoom-btn-container">
+        <div class="zoom-btn-in">
+          <img src="images/in.png" alt="Zoom In">
+        </div>
+        <div class="zoom-btn-out">
+          <img src="images/out.png" alt="Zoom Out">
+        </div>
+      </div>
+   
+</body>
+</html>
