@@ -249,7 +249,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 
   .commute-routes-espana {
@@ -440,9 +439,11 @@ body {
   left: 10px;
   align-items: center;
   width: 400px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
+  height: auto;
+  min-height: 200px;
+  max-height: 400px;
+  display: block;
+  flex-direction: column;
   background-color: rgb(255, 255, 255);
   box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.25);
   position: absolute;
@@ -475,7 +476,76 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.ust-b-menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: auto;
+  border-radius: 18px;
+  margin: auto;
+  flex-direction: column;
+}
 
+.ust-b-list {
+  width: 350px;
+  height: 80px;
+  position: inherit;
+  background: #F4C01E;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
 
+.ust-b-list-img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
 
+.ust-b-list-img img {
+  width: 50px;
+  height: auto;
+}
+
+.ust-b-list-tx {
+  flex: 1;
+  text-align: left;
+}
+
+.card-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: none; 
+  z-index: 3;
+}
+
+.card {
+  background-color: #F4C01E;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.gray-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  display: none;
+}
   
