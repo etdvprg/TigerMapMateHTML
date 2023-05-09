@@ -149,13 +149,17 @@
     gap: 1em;
 }
 .category {
-    width: 200px;
+    width: fit-content;
     height: 40px;
     border-radius: 24px;
     background-color: rgb(253, 192, 134);
+    overflow: hidden;
 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: left;
+    font-size: 12px;
+    padding-left: 1em;
+    padding-right: 1em;
 }
