@@ -1,7 +1,11 @@
 // Code Retrieved from here: https://www.youtube.com/watch?v=HRpjAGT7X4Y
 // Thank you Benjamin Flanders
-filterObject('all', 1);
-filterObject('all', 2);
+
+function displayAll() {
+    filterObject('all', 1);
+    filterObject('all', 2);
+}
+
 
 function filterObject (c, type) {
     var x;
