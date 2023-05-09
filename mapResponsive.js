@@ -23,3 +23,12 @@ document.addEventListener("DOMContentLoaded", function() {
   commuteDropdown.classList.toggle("visible");
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const pnrRouteDropdownButton = document.querySelector(".pnr-route-dropdown-button");
+  const pnrRouteDropdown = document.querySelector(".pnr-route-dropdown-container");
+
+  pnrRouteDropdownButton.addEventListener("click", function() {
+    pnrRouteDropdown.classList.toggle("visible");
+  });
+});
