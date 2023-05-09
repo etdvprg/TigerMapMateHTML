@@ -21,6 +21,7 @@
     box-shadow: 20px 20px 4px 0px rgba(0, 0, 0, 0.25) ;
     box-sizing: content-box;
     overflow: hidden;
+    border: 1px solid rgb(94, 94, 94);
     
     border-radius: 18px;
     background-color: rgba(255, 255, 255, 1);
@@ -138,6 +139,7 @@
     transform: translate(0, 1em);
     background-color: rgb(235, 221, 102);
     border-radius: 12px;
+    border: 1px solid rgb(94, 94, 94);
 
     align-items: center;
     justify-content: center;
@@ -154,9 +156,10 @@
 }
 
 .hl {
-    border-bottom: 4px solid rgb(94, 94, 94);
-    width: 1000px;
-    border-radius: 1px;
+    border-bottom: 1px solid rgb(94, 94, 94);
+    width: 800px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .category-container {
@@ -165,6 +168,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 1em;
+    margin-bottom: 10px;
 }
 .category {
     width: fit-content;
