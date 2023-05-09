@@ -93,9 +93,12 @@ body {
     left: 10px;
     width: 400px;
     height: 200px;
-    display: flex;
+    display: block;
     position: absolute;
-    border-radius: 41px;
+    padding: 21px 9px;
+    border-radius: 18px;
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.25) ;
+    justify-content: space-between;
     background-color: rgba(255, 255, 255, 1);
     justify-content: center;
     align-items: center;
@@ -106,14 +109,18 @@ body {
   }
   
   .commute-route-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     margin: auto;
-    display: block;
     margin-top: 50px;
     margin-bottom: auto;
   }
   
   .commute-dropdown-button {
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 300px;
     display: flex;
@@ -123,9 +130,9 @@ body {
     align-items: center;
     flex-shrink: 0;
     border-radius: 24px;
-    justify-content: space-between;
     background-color: rgba(75, 75, 75, 0.5600000023841858);
     height: auto;
+    margin: 0 auto;
     margin-top: auto;
     margin-bottom: 100px;
     cursor: pointer;
@@ -133,6 +140,9 @@ body {
   }
   
   .commute-dropdown-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -115%);
     position: absolute;
     background-color: rgba(255, 255, 255, 1);
     width: 300px;
@@ -284,6 +294,7 @@ body {
     background-color: #F4C01E;
     overflow: auto;
     overflow-x: hidden;
+    z-index: 2;
 }
 
 .pnr-route-list {
