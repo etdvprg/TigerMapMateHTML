@@ -452,6 +452,8 @@ body {
   padding: 21px 9px;
   justify-content: center;
   box-sizing: content-box;
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 .ust-b-menu-text {
