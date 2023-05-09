@@ -43,3 +43,48 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const listItems = document.querySelectorAll('.ust-b-list');
+const cardContainer = document.getElementById('card-container');
+const grayOut = document.createElement('div');
+
+grayOut.className = 'gray-out';
+document.body.appendChild(grayOut);
+
+function showCard(cardId) {
+  // Show the card with the given ID
+  const card = document.getElementById(cardId);
+  cardContainer.style.display = 'block';
+  card.style.display = 'block';
+
+  // Gray out the rest of the website
+  grayOut.style.display = 'block';
+}
+
+function hideCard() {
+  // Hide the card and un-gray the website
+  cardContainer.style.display = 'none';
+  grayOut.style.display = 'none';
+
+  // Hide all the cards
+  const cards = cardContainer.querySelectorAll('.card');
+  cards.forEach(card => card.style.display = 'none');
+}
+
+// Add click event listeners to the list items
+listItems.forEach(listItem => {
+  const cardId = listItem.getAttribute('data-card-id');
+
+  listItem.addEventListener('click', () => {
+    hideCard();
+    showCard(cardId);
+  });
+});
+
+// Add click event listener to the gray out element
+grayOut.addEventListener('click', () => {
+  hideCard();
+});
+
+});
