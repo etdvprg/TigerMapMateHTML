@@ -29,14 +29,27 @@ body {
     right: 20px;
     z-index: 2;
   }
-
-  .zoom-btn-in, .zoom-btn-out {
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  
+  .map-zoom-btn-container .zoom-btn-in,
+  .map-zoom-btn-container .zoom-btn-out {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 5px;
     cursor: pointer;
   }
+  
+  .map-zoom-btn-container img {
+    max-width: 50%;
+    max-height: 50%;
+  }
+  
 
   .map-toggles {
     position: absolute;
