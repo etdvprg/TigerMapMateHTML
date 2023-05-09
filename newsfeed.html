@@ -10,8 +10,9 @@
     <link rel="stylesheet" type="text/css" href="header.css">
     <link rel="stylesheet" type="text/css" href="newsfeed.css">
     <script src="navBtnResponsive.js"></script>
+    <script src="ObjectFilter.js"></script>
 </head>
-<body>
+<body onload="displayAll();">
     <header>
         <nav class="navbar">
             <a class="navbar-brand" href="index.html">
@@ -44,153 +45,132 @@
         </nav>
     </header>
 
-    <div id="newsfeed-title">
-        <h1 id="title-text">Newsfeed</h1>
+    <div class="page-container">
+        <div id="newsfeed-title">
+            <h1 id="title-text">Newsfeed</h1>
+        </div>
+
+        <div class="feed-container">
+            <div class="category-container">
+                    <p>Categories:</p>
+                    <button class="category" onclick="filterObject('all', 1); filterObject('all', 2)">
+                        Show All
+                    </button>
+                    <button class="category" 
+                    onclick="filterObject('ust-announce', 1); filterObject('ust-announce', 2)">
+                        UST Announcements
+                    </button>
+                    <button class="category" 
+                    onclick="filterObject('college-announce', 1); filterObject('college-announce', 2)">
+                        Collegial Announcements
+                    </button>
+                    <button class="category" 
+                    onclick="filterObject('sports', 1); filterObject('sports', 2)">
+                        Sports
+                    </button>
+                </div>
+            <div class="feedbox-part">
+                <a class="feedbox-container ust-announce" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <img src="images/cbcp pic.jpg" class="feedbox-image">
+                    <p class="feed-text" style="top: 7px;left: 1%">CBCP donates microfilm copies of canonical books containing...</p>
+                    <div class="category">UST Announcements</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94); left: -22%">5 hours ago</p>
+                </a>
+                <a class="feedbox-container ust-announce" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <img src="images/cbcp pic.jpg" class="feedbox-image">
+                    <p class="feed-text" style="top: 7px;left: 1%">CBCP donates microfilm copies of canonical books containing...</p>
+                    <div class="category">UST Announcements</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94); left: -22%">5 hours ago</p>
+                </a>
+                <a class="feedbox-container sports" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <img src="images/cbcp pic.jpg" class="feedbox-image">
+                    <p class="feed-text" style="top: 7px;left: 1%">CBCP donates microfilm copies of canonical books containing...</p>
+                    <div class="category">Sports</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94); left: -22%">5 hours ago</p>
+                </a>
+                <a class="feedbox-container college-announce" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <img src="images/cbcp pic.jpg" class="feedbox-image">
+                    <p class="feed-text" style="top: 7px;left: 1%">CBCP donates microfilm copies of canonical books containing...</p>
+                    <div class="category">Collegial</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94); left: -22%">5 hours ago</p>
+                </a>
+                <a class="feedbox-container sports" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <img src="images/cbcp pic.jpg" class="feedbox-image">
+                    <p class="feed-text" style="top: 7px;left: 1%">CBCP donates microfilm copies of canonical books containing...</p>
+                    <div class="category">Sports</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94); left: -22%">5 hours ago</p>
+                </a>
+                <a class="feedbox-container college-announce" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <img src="images/cbcp pic.jpg" class="feedbox-image">
+                    <p class="feed-text" style="top: 7px;left: 1%">CBCP donates microfilm copies of canonical books containing...</p>
+                    <div class="category">Collegial</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94); left: -22%">5 hours ago</p>
+                </a>
+            </div>
+            <div class="hl" style="align-self: center;"> </div>
+            <div class="feed-mini-news">
+                <!--Row 1-->
+                <a class="feedbox-mini-container ust-announce" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <p class="feed-text">CICS announces that CICS week would be held in May</p>
+                    <div class="category">UST Announcements</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
+                </a>
+                <a class="feedbox-mini-container ust-announce" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <p class="feed-text">CICS announces that CICS week would be held in May</p>
+                    <div class="category">UST Announcements</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
+                </a>
+                <a class="feedbox-mini-container ust-announce" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <p class="feed-text">CICS announces that CICS week would be held in May</p>
+                    <div class="category">UST Announcements</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
+                </a>
+                <a class="feedbox-mini-container ust-announce" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <p class="feed-text">CICS announces that CICS week would be held in May</p>
+                    <div class="category">UST Announcements</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
+                </a>
+                <a class="feedbox-mini-container sports" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <p class="feed-text">CICS announces that CICS week would be held in May</p>
+                    <div class="category">Sports</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
+                </a>
+                <!--Row 2-->
+                <a class="feedbox-mini-container sports" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <p class="feed-text">CICS announces that CICS week would be held in May</p>
+                    <div class="category">UST Announcements</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
+                </a>
+                <a class="feedbox-mini-container college-announce" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <p class="feed-text">CICS announces that CICS week would be held in May</p>
+                    <div class="category">UST Announcements</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
+                </a>
+                <a class="feedbox-mini-container sports" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <p class="feed-text">CICS announces that CICS week would be held in May</p>
+                    <div class="category">UST Announcements</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
+                </a>
+                <a class="feedbox-mini-container sports" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <p class="feed-text">CICS announces that CICS week would be held in May</p>
+                    <div class="category">UST Announcements</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
+                </a>
+                <a class="feedbox-mini-container sports" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
+                    <p class="feed-text">CICS announces that CICS week would be held in May</p>
+                    <div class="category">UST Announcements</div>
+                    <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
+                </a>
+                
+            </div>
+            
+           
+        </div>
     </div>
 
-    <div class="feed-container">
-        <div class="feedbox-part">
-            <a class="feedbox-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                    <img src="images/cbcp pic.jpg" class="feedbox-image">
-                    <p class="feed-text">CBCP donates microfilm copies of canonical books containing...</p>
-                    <p class="feed-text" style="color: rgb(94, 94, 94); left: -22%">5 hours ago</p>
-            </a>
-            <a class="feedbox-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <img src="images/cbcp pic.jpg" class="feedbox-image">
-                <p class="feed-text">CBCP donates microfilm copies of canonical books containing...</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94); left: -22%">5 hours ago</p>
-            </a>
-            <a class="feedbox-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <img src="images/cbcp pic.jpg" class="feedbox-image">
-                <p class="feed-text">CBCP donates microfilm copies of canonical books containing...</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94); left: -22%">5 hours ago</p>
-            </a>
-            <a class="feedbox-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <img src="images/cbcp pic.jpg" class="feedbox-image">
-                <p class="feed-text">CBCP donates microfilm copies of canonical books containing...</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94); left: -22%">5 hours ago</p>
-            </a>
-            <a class="feedbox-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <img src="images/cbcp pic.jpg" class="feedbox-image">
-                <p class="feed-text">CBCP donates microfilm copies of canonical books containing...</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94); left: -22%">5 hours ago</p>
-            </a>
-            <a class="feedbox-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <img src="images/cbcp pic.jpg" class="feedbox-image">
-                <p class="feed-text">CBCP donates microfilm copies of canonical books containing...</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94); left: -22%">5 hours ago</p>
-            </a>
-            <a class="feedbox-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <img src="images/cbcp pic.jpg" class="feedbox-image">
-                <p class="feed-text">CBCP donates microfilm copies of canonical books containing...</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94); left: -22%">5 hours ago</p>
-            </a>
-        </div>
-        <hr>
-        <div class="feed-mini-news">
-            <!--Column 1-->
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <!--Column 2-->
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <!--Column 3-->
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <!--Column 4-->
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-            <a class="feedbox-mini-container" href="https://www.ust.edu.ph/cbcp-donates-microfilm-copies-of-canonical-books-containing-catholic-faithful-records-from-17th-20th-centuries/">
-                <p class="feed-text">CICS announces that CICS week would be held in May</p>
-                <p class="feed-text" style="color: rgb(94, 94, 94)">5 hours ago</p>
-            </a>
-        </div>
-       
-    </div>
+    
+
+    
     
 </body>
 </html>
