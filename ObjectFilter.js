@@ -1,7 +1,11 @@
 // Code Retrieved from here: https://www.youtube.com/watch?v=HRpjAGT7X4Y
 // Thank you Benjamin Flanders
-function filterFeedbox (c, type) {
+filterObject('all', 1);
+filterObject('all', 2);
+
+function filterObject (c, type) {
     var x;
+    console.log(c + type);
     if (type == 1) {
         x = document.getElementsByClassName("feedbox-container");
     } else {
@@ -12,7 +16,7 @@ function filterFeedbox (c, type) {
     for (var i=0; i < x.length; i++) {
         removeClass(x[i], "show");
         if (x[i].className.indexOf(c) > -1) {
-            addClass(x[i], show);
+            addClass(x[i], "show");
         }
     }
 }
