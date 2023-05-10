@@ -189,28 +189,29 @@ body {
   .commute-menu-espana {
     top: 120px;
     left: 10px;
-    width: 400px;
-    height: 600px;
-    display: flex;
-    position: absolute;
-    border-radius: 41px;
-    background-color: rgba(255, 255, 255, 1);
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    flex-shrink: 0;
+    width: 400px;
+    height: auto;
+    min-height: 200px;
+    max-height: 400px;
+    display: block;
     flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
     z-index: 2;
-    padding: 0;
+    border-radius: 18px;
+    flex-shrink: 0;
+    padding: 21px 9px;
+    justify-content: center;
+    box-sizing: content-box;
     overflow: auto;
+    overflow-x: hidden;
     }
     
     .commute-route-selection-espana {
-    position: relative;
-    margin: auto;
-    display: block;
-    margin-top: 50px;
-    margin-bottom: 50px;
+      text-align: center;
+      font-weight: 600;
     }
     
     .commute-menu-espana-header {
@@ -218,30 +219,26 @@ body {
     position: relative;
     margin: auto;
     display: block;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 2px;
+    margin-bottom: 10px;
     }
   
   .commute-dropdown-button-espana {
-    position: relative;
-    width: 300px;
-    display: flex;
-    opacity: 0.5;
-    padding: 10px 25px;
-    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.12999999523162842);
-    align-items: center;
-    flex-shrink: 0;
-    border-radius: 15px;
-    justify-content: space-between;
-    background-color: rgba(75, 75, 75, 0.5600000023841858);
-    height: auto;
-    cursor: pointer;
-    font-weight: 600;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(36, 36, 36, 1);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
   }
   
   .commute-route {
-    width: 350px;
-    height: 80px;
+    width: 383px;
+    height: 84px;
     position: inherit;
     background: #F4C01E;
     border-radius: 20px;
@@ -249,6 +246,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: -10px;
+    cursor: pointer;
   }
 
   .commute-routes-espana {
