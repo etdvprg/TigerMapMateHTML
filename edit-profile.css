@@ -1,5 +1,5 @@
 .save-button {
-    background-color: #4CAF50;
+    background-color: #F4C01E;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -14,7 +14,7 @@
   
   /* Cancel button */
   .cancel-button {
-    background-color: #f44336;
+    background-color: #4f4d4d;
     color: white;
     border: none;
     padding: 10px 20px;
