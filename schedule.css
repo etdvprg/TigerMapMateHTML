@@ -83,26 +83,30 @@
     width: 500px;
     height: 500px;
     /* background-color: black; */
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    overflow: auto;
 }
 
 .schedule-item {
-    left: 0;
-    width: 500px;
-    height: 100px;
+    width: 450px;
+    height: 85px;
     display: none;
     position: relative;
     box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25) ;
     box-sizing: content-box;
 
     /* align-items: center; */
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    align-self: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
     flex-shrink: 0;
     border-radius: 12px;
     cursor: pointer;
+    padding: 15px;
     
     background-color: rgb(235, 221, 102);
 }
@@ -113,14 +117,47 @@
 
 .left-field {
     display: flex;
-
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
 }
 
 .right-field {
-
+    display: flex;
+    align-items: flex-end;
 }
 
 .show {
     display: flex;
+}
+
+.subject-logo {
+    width: 40px;
+    height: 35px;
+    text-align: center;
+    align-items: center;
+    padding-top: 5px;
+    justify-items: center;
+    background-color: beige;
+    border-radius: 6px;
+}
+
+.subject-content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.delete-button {
+    width: 24px;
+    height: 80px;
+    text-align: center;
+    background-color: rgb(253, 161, 40);
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
