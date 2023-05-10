@@ -16,9 +16,10 @@
     <link rel="stylesheet" type="text/css" href="header.css">
     <link rel="stylesheet" type="text/css" href="schedule.css">
     <script src="navBtnResponsive.js"></script>
+    <script src="CalendarDayGenerator.js"></script>
 </head>
 
-<body>
+<body onload="generateDays(2, 31, 30);">
     <header>
         <nav class="navbar">
             <a class="navbar-brand" href="index.html">
@@ -57,7 +58,7 @@
         </div>
         <div id="schedule-feed-container">
             <div id="schedule-calendar">
-
+                <div id="calendar-heading"></div>
             </div>
             <div id="schedule-daily" class="schedule-list">
 
