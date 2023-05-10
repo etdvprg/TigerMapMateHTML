@@ -45,104 +45,48 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-document.addEventListener("mousedown", function(event) {
-  console.log(event.button);
-  if (event.button === 0) { // 0 corresponds to the left mouse button
-    console.log("mouse down");
-    isLeftMouseDown = true;
-  }
-});
-
-// Event listener for mouse up
-document.addEventListener("mouseup", function(event) {
-  console.log(event.button);
-  if (event.button === 0) {
-    console.log("mouse up");
-    isLeftMouseDown = false;
-  }
-});
-
-/*
-// Event listener for mouse move
-document.addEventListener("mousemove", function(event) {
-  if (isLeftMouseDown) {
-    // Mouse is being held down and moving
-    // Perform actions here
-    console.log("Left mouse button is being held down");
-  }
-});
-*/
-
-/*
-// Variables to store the previous mouse position
-let prevMouseX = 0;
-let prevMouseY = 0;
-
-// Event listener for mouse movement
-document.addEventListener("mousemove", handleMouseMove);
-
-function handleMouseMove(event) {
-  // Get the current mouse position
-  const mouseX = event.clientX;
-  const mouseY = event.clientY;
-
-  // Calculate the mouse delta
-  const deltaX = mouseX - prevMouseX;
-  const deltaY = mouseY - prevMouseY;
-
-  // Update the previous mouse position
-  prevMouseX = mouseX;
-  prevMouseY = mouseY;
-
-  // Do something with the mouse delta
-  console.log("Mouse delta X: ", deltaX);
-  console.log("Mouse delta Y: ", deltaY);
-}
-*/
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const listItems = document.querySelectorAll('.ust-b-list');
-  const cardContainer = document.getElementById('card-container');
-  const grayOut = document.createElement('div');
+const cardContainer = document.getElementById('card-container');
+const grayOut = document.createElement('div');
 
-  grayOut.className = 'gray-out';
-  document.body.appendChild(grayOut);
+grayOut.className = 'gray-out';
+document.body.appendChild(grayOut);
 
-  function showCard(cardId) {
-    // Show the card with the given ID
-    const card = document.getElementById(cardId);
-    cardContainer.style.display = 'block';
-    card.style.display = 'block';
+function showCard(cardId) {
+  // Show the card with the given ID
+  const card = document.getElementById(cardId);
+  cardContainer.style.display = 'block';
+  card.style.display = 'block';
 
-    // Gray out the rest of the website
-    grayOut.style.display = 'block';
-  }
+  // Gray out the rest of the website
+  grayOut.style.display = 'block';
+}
 
-  function hideCard() {
-    // Hide the card and un-gray the website
-    cardContainer.style.display = 'none';
-    grayOut.style.display = 'none';
+function hideCard() {
+  // Hide the card and un-gray the website
+  cardContainer.style.display = 'none';
+  grayOut.style.display = 'none';
 
-    // Hide all the cards
-    const cards = cardContainer.querySelectorAll('.card');
-    cards.forEach(card => card.style.display = 'none');
-  }
+  // Hide all the cards
+  const cards = cardContainer.querySelectorAll('.card');
+  cards.forEach(card => card.style.display = 'none');
+}
 
-  // Add click event listeners to the list items
-  listItems.forEach(listItem => {
-    const cardId = listItem.getAttribute('data-card-id');
+// Add click event listeners to the list items
+listItems.forEach(listItem => {
+  const cardId = listItem.getAttribute('data-card-id');
 
-    listItem.addEventListener('click', () => {
-      hideCard();
-      showCard(cardId);
-    });
-  });
-
-  // Add click event listener to the gray out element
-  grayOut.addEventListener('click', () => {
+  listItem.addEventListener('click', () => {
     hideCard();
+    showCard(cardId);
   });
+});
+
+// Add click event listener to the gray out element
+grayOut.addEventListener('click', () => {
+  hideCard();
+});
 
 });
 
