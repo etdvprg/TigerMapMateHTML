@@ -687,6 +687,7 @@ body {
 .ust-e-list-tx {
   flex: 1;
   text-align: left;
+  font-weight: 600;
 }
 
 .ust-e-list-img {
@@ -701,4 +702,75 @@ body {
   height: auto;
 }
 
-  
+.restaurant-card-container {
+  position: absolute;
+  display: none; 
+  z-index: 3;
+  top: 200px;
+  left: 10px;
+}
+
+.restaurant-card-container {
+  position: absolute;
+  display: none; 
+  z-index: 3;
+  top: 400px;
+  left: 10px;
+}
+
+.rcard {
+  display: none;
+  position: absolute;
+  top: 200px;
+  left: 10px;
+  z-index: 4;
+  width: 380px;
+  height: 200px;
+  background-color: #F4C01E;
+  border-radius: 15px;
+  overflow-y: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.rcard.show {
+  display: block;
+}
+
+.rcard-header {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+
+.close-btn {
+  width: 15px;
+  height: 15px;
+}
+
+.close-rcard-button {
+  position: absolute;
+  top: 7.5px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.rcard-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  width: 350px;
+  height: auto;
+  border-radius: 18px;
+  margin: auto;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+}
+
+.resto-info {
+  font-size: auto;
+}
+
+
