@@ -54,26 +54,19 @@ grayOut.className = 'gray-out';
 document.body.appendChild(grayOut);
 
 function showCard(cardId) {
-  // Show the card with the given ID
   const card = document.getElementById(cardId);
   cardContainer.style.display = 'block';
   card.style.display = 'block';
-
-  // Gray out the rest of the website
   grayOut.style.display = 'block';
 }
 
 function hideCard() {
-  // Hide the card and un-gray the website
   cardContainer.style.display = 'none';
   grayOut.style.display = 'none';
 
-  // Hide all the cards
   const cards = cardContainer.querySelectorAll('.card');
   cards.forEach(card => card.style.display = 'none');
 }
-
-// Add click event listeners to the list items
 listItems.forEach(listItem => {
   const cardId = listItem.getAttribute('data-card-id');
 
@@ -83,7 +76,6 @@ listItems.forEach(listItem => {
   });
 });
 
-// Add click event listener to the gray out element
 grayOut.addEventListener('click', () => {
   hideCard();
 });
@@ -100,62 +92,38 @@ document.addEventListener("DOMContentLoaded", function() {
     const cardIndex = parseInt(listItem.getAttribute('data-index'));
     const card = document.querySelector(`.restaurant-card.result-${cardIndex}`);
 
-    // Add click event listener to each list item
     listItem.addEventListener('click', () => {
-      // Toggle the card's visibility
       card.classList.toggle('visible');
-
-      // Add a class to the card container to make it permanent
       cardContainer.classList.add('active');
     });
 
-    // Add click event listener to the card's close button
     const closeButton = card.querySelector('.close-card-button');
     closeButton.addEventListener('click', () => {
-      // Hide the card
       card.classList.remove('visible');
-
-      // Remove the class from the card container to make it non-permanent
       cardContainer.classList.remove('active');
     });
   }
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-  // Get all the restaurant list items
 const restaurantListItems = document.querySelectorAll('.ust-e-list');
-
-// Get the restaurant card container
 const restaurantCardContainer = document.getElementById('restaurant-card-container');
-
-// Loop through all the restaurant list items
 restaurantListItems.forEach(function(item) {
 
-  // Add a click event listener to each restaurant list item
   item.addEventListener('click', function() {
-
-    // Get the ID of the restaurant card to show
     const rcardId = item.getAttribute('data-rcard-id');
-
-    // Get the restaurant card to show
     const restaurantCard = document.getElementById(`rcard-${rcardId}`);
 
-    // Show the restaurant card
     restaurantCardContainer.style.display = 'block';
     restaurantCard.style.display = 'block';
 
-    // Add a click event listener to the close button
     const closeButton = restaurantCard.querySelector('.close-rcard-button');
     closeButton.addEventListener('click', function() {
-      // Hide the restaurant card
       restaurantCardContainer.style.display = 'none';
       restaurantCard.style.display = 'none';
     });
-
   });
-
 });
-
 });
 
 
