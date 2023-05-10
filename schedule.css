@@ -39,7 +39,7 @@
 
 #schedule-calendar {
     width: 300px;
-    height: 300px;
+    height: 350px;
     /* background-color: black; */
 
     display: flex;
@@ -52,10 +52,37 @@
 .schedule-list {
     width: 500px;
     height: 500px;
-    background-color: black;
+    /* background-color: black; */
+    align-items: center;
 }
+
+.schedule-item {
+    left: 0;
+    width: 500px;
+    height: 100px;
+    display: flex;
+    position: relative;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25) ;
+    box-sizing: content-box;
+
+    /* align-items: center; */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    flex-shrink: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    
+    background-color: rgb(235, 221, 102);
+}
+
 #schedule-daily {
     
+}
+
+.schedule-daily-heading {
+    font-weight: bold;
 }
 
 #schedule-tomorrow {
@@ -75,10 +102,17 @@
     color:rgba(82, 82, 82, 0.836);
 }
 
-#calendar-heading {
-    width: 300px;
-    height: 40px;
+.calendar-day-of-week {
+    width: 40px;
+    height: 25px;
     background-color: #F8D57E;
-    display: flex;
     border-radius: 4px;
+    text-align: center;
+    margin: 1px;
+}
+
+.calendar-heading {
+    width: 300px;
+    height: auto;
+    text-align: center;
 }

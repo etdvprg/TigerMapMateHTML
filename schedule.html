@@ -19,7 +19,7 @@
     <script src="CalendarDayGenerator.js"></script>
 </head>
 
-<body onload="generateDays(2, 31, 30);">
+<body onload="generateCalendar(2, 31, 30);">
     <header>
         <nav class="navbar">
             <a class="navbar-brand" href="index.html">
@@ -58,13 +58,23 @@
         </div>
         <div id="schedule-feed-container">
             <div id="schedule-calendar">
-                <div id="calendar-heading"></div>
+                <h2 class="calendar-heading">May</h1>
             </div>
             <div id="schedule-daily" class="schedule-list">
-
+                <div class="schedule-daily-heading">
+                    <h2>Today's Schedule</h2>
+                    <p style="color: #F4C01E;">Friday, May 12 </p>
+                </div>
+                
+                <div class="schedule-item"></div>
             </div>
             <div id="schedule-tomorrow" class="schedule-list">
-
+                <div class="schedule-daily-heading">
+                    <h2>Tomorrow's Schedule</h2>
+                    <p style="color: #F4C01E;">Saturday, May 13</p>
+                    <h3 style="text-align: center;">No classes! 😊</p>
+                </div>
+                
             </div>
         </div>
     </div>
