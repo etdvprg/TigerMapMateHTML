@@ -2,19 +2,14 @@
 // Thank you Benjamin Flanders
 
 function displayAll() {
-    filterObject('all', 1);
-    filterObject('all', 2);
+    filterObject('all', "feedbox-container");
+    filterObject('all', "feedbox-mini-container");
+    filterObject('all', "schedule-item");
 }
 
 
 function filterObject (c, type) {
-    var x;
-    console.log(c + type);
-    if (type == 1) {
-        x = document.getElementsByClassName("feedbox-container");
-    } else {
-        x = document.getElementsByClassName("feedbox-mini-container");
-    }
+    var x = document.getElementsByClassName(type);
     
     if (c == "all") c = "";
     for (var i=0; i < x.length; i++) {
