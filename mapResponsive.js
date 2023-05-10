@@ -88,3 +88,5 @@ grayOut.addEventListener('click', () => {
 });
 
 });
+
+
