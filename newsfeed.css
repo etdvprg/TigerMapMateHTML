@@ -11,16 +11,17 @@
 .feed-container {
     top: 30px;
     width: 1180px;
-    height: 900px;
+    height: 450px;
 
     display: flex;
     flex-direction: column;
     gap: 0.05em;
-    padding: 29px 92px;
+    padding: 10px 92px 20px 92px; /* T R B L */
     position: relative;
     box-shadow: 20px 20px 4px 0px rgba(0, 0, 0, 0.25) ;
     box-sizing: content-box;
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow-y: auto;
     border: 1px solid rgb(94, 94, 94);
     
     border-radius: 18px;
