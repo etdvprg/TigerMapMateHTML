@@ -24,8 +24,9 @@
 }
 
 #schedule-feed-container {
-    width: 1440px;
-    height: 500px;
+    width: 95%;
+    height: 50%;
+    min-height: auto;
     
     background-color: rgba(255, 255, 255, 1);
     border-radius: 12px;
@@ -34,7 +35,9 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 1em;
+    padding-bottom: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 #schedule-calendar {
@@ -85,12 +88,13 @@
     /* background-color: black; */
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.5em;
     overflow: auto;
+    align-content: center;
 }
 
 .schedule-item {
-    width: 450px;
+    width: 80%;
     height: 85px;
     display: none;
     position: relative;
@@ -111,8 +115,10 @@
     background-color: rgb(235, 221, 102);
 }
 
+/* Daily - Schedule Contents */
 .schedule-daily-heading {
     font-weight: bold;
+    text-align: center;
 }
 
 .left-field {
@@ -159,5 +165,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.delete-button:hover {
+    background-color: rgba(255, 46, 46, 0.74);
 }
 
