@@ -798,8 +798,7 @@ body {
   left: 10px;
   align-items: center;
   width: 400px;
-  height: auto;
-  min-height: 100px;
+  min-height: 400px;
   max-height: 400px;
   display: block;
   flex-direction: column;
@@ -822,3 +821,45 @@ body {
   font-weight: 600;
   margin-bottom: 10px;
 }
+
+.bookmarks-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  width: 350px;
+  height: auto;
+  border-radius: 18px;
+  margin: auto;
+  flex-direction: column;
+  margin-top: 10px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.bookmark {
+  width: 350px;
+  height: 160px;
+  position: inherit;
+  background: #F4C01E;
+  border-radius: 20px;
+  display: block;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.bookmark-b-h {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.bookmark-add {
+  background-color: #ffd99f;
+  border-radius: 18px;
+  height: 40px;
+  width: 40px;
+}
+
