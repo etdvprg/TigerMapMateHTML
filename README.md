@@ -5,7 +5,7 @@ The web application also includes two additional features, a schedule, and a new
 However, the schedule feature is only available when the user is logged in.
 
 The project was completed by several members for the CS2612 (Human-Computer Interaction) in the University of Santo Tomas, 
-and its target completion is on May 13, 2023.
+and its target completion is on **May 13, 2023**.
 
 Live server: [https://tigermapmate-aatv.netlify.app](https://tigermapmate-aatv.netlify.app)
 
