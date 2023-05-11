@@ -793,3 +793,32 @@ body {
 }
 
 
+.bookmarks-container {
+  top: 120px;
+  left: 10px;
+  align-items: center;
+  width: 400px;
+  height: auto;
+  min-height: 100px;
+  max-height: 400px;
+  display: block;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  z-index: 2;
+  border-radius: 18px;
+  flex-shrink: 0;
+  padding: 21px 9px;
+  justify-content: center;
+  box-sizing: content-box;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+
+.bookmarks-h-text {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
