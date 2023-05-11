@@ -9,10 +9,10 @@ body {
   
   .map-image-container {
     position: fixed;
-    top: 90px;
+    top: 75px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 75px);
     z-index: -1;
     overflow: hidden;
   }
