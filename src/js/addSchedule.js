@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         newSched.className = "schedule-item show" + " item-" + ++count;
         newSched.textContent = "HI!";
         daySched.appendChild(newSched);
-        flickerClass("add-schedule");
+        //flickerClass("add-schedule");
     });
 });
 

@@ -51,5 +51,10 @@ function hideClass(className) {
 export function flickerClass(className) {
     var c = document.getElementsByClassName(className)[0];
     removeClass(c, 'show');
-    addClass(c, 'show');
+    var delayInMilliseconds = 1000;
+    setTimeout(function() {
+        // Thank you stack overflow
+        addClass(c, 'show');
+      }, delayInMilliseconds);
+    
 }
