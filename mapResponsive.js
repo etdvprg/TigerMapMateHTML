@@ -156,5 +156,28 @@ document.addEventListener("DOMContentLoaded", function() {
   
 })
 
+document.addEventListener("DOMContentLoaded", function() {
+  const bookmarkAddButton = document.querySelector('.bookmark-add');
+const bookmarkAddForm = document.querySelector('.bookmark-add-form');
+const overlay = document.createElement('div');
+overlay.classList.add('overlay');
+document.body.appendChild(overlay);
 
+bookmarkAddButton.addEventListener('click', () => {
+  bookmarkAddForm.style.display = 'block';
+  overlay.style.display = 'block';
+});
+
+document.getElementById('cancel-button').addEventListener('click', () => {
+  bookmarkAddForm.style.display = 'none';
+  overlay.style.display = 'none';
+});
+
+overlay.addEventListener('click', () => {
+  bookmarkAddForm.style.display = 'none';
+  overlay.style.display = 'none';
+});
+
+
+})
 
