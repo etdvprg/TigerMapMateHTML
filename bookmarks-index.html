@@ -102,18 +102,26 @@
     </div>
 
     <div class="bookmark-add-form" id="bookmark-add-form">
-      <h3>Add a Bookmark</h3>
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name" placeholder="Name">
-      <label for="address">Address:</label>
-      <input type="text" name="address" id="address" placeholder="Address">
-      <label for="description">Description:</label>
-      <input type="text" name="description" id="description" placeholder="Description">
-      <button type="submit">Add Bookmark</button>
-      <button type="button" id="cancel-button">Cancel</button>
+
+      <div class="bookmark-af-h">
+        <h3>Add a Bookmark</h3>
+      </div>
+
+      <div class="bookmark-af-b">
+        <label for="name" id="bookmark-af-label">Name:</label>
+        <input type="text" name="name" id="bookmark-af-text" placeholder="Name">
+        <label for="address" id="bookmark-af-label">Address:</label>
+        <input type="text" id="bookmark-af-text" id="address" placeholder="Address">
+        <label for="description" id="bookmark-af-label">Description:</label>
+        <textarea type="text" name="description" id="bookmark-af-text" placeholder="Description"></textarea>
+        <label for="icon" id="bookmark-af-label">Icon (Emoji):</label>
+        <input type="icon" name="name" id="bookmark-af-icon" accept="image/*" maxlength="1">
+        <button type="submit" id="add-b-btn">Add Bookmark</button>
+        <button type="button" id="cancel-b-btn">Cancel</button>
+      </div>
+
     </div>
   
-      
       <div class="map-zoom-btn-container">
         <div class="zoom-btn-in">
           <img src="images/in.png" alt="Zoom In">

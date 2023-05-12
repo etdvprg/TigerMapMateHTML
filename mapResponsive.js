@@ -168,7 +168,7 @@ bookmarkAddButton.addEventListener('click', () => {
   overlay.style.display = 'block';
 });
 
-document.getElementById('cancel-button').addEventListener('click', () => {
+document.getElementById('cancel-b-btn').addEventListener('click', () => {
   bookmarkAddForm.style.display = 'none';
   overlay.style.display = 'none';
 });
