@@ -1,0 +1,93 @@
+.save-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* Cancel button */
+  .cancel-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .login-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+  
+  .edit-name-textbook input[type="edit"],
+  .edit-email-textbook input[type="email"],
+  .edit-password-textbook input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(36, 36, 36, 1);
+    font-size: 16px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .edit-name-textbook input[type="edit"]::placeholder,
+  .edit-email-textbook input[type="email"]::placeholder,
+  .edit-password-textbook input[type="password"]::placeholder {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .edit-name-textbook input[type="edit"]:hover,
+  .edit-email-textbook input[type="email"]:hover,
+  .edit-password-textbook input[type="password"]:hover {
+    background-color: rgba(80, 80, 80, 1);
+  }
+  
+  .edit-name-textbook input[type="edit"]:focus,
+  .edit-email-textbook input[type="email"]:focus,
+  .edit-password-textbook input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(244, 192, 30, 1);
+  }
+  .login-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #fff;
+    background-color: rgba(36, 36, 36, 1); /* added background color */
+    padding: 12px 20px; /* added padding */
+    border-radius: 10px; /* added border-radius */
+  }
+  .edit-profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .edit-profile-title {
+    margin-bottom: -25px;
+  }
+  .edit-profile-picture {
+    width: 80px;
+    height: 80px; 
+  }
