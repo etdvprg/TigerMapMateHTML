@@ -902,3 +902,36 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.bookmark-b-l {
+  font-size: 10px;
+  text-align: center;
+}
+
+.bookmark-b-d {
+  font-size: 20px;
+  text-align: center;
+}
+
+.bookmark-icon {
+  display: flex;
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 15px;
+  left: auto;
+  float: right;
+}
+
+
+.bookmark-icon img {
+  max-width: 50%;
+  max-height: 50%;
+  display: block;
+  margin: auto;
+}
