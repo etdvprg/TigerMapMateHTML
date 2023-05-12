@@ -54,7 +54,7 @@ body {
   .map-toggles {
     position: absolute;
     width: 50px;
-    height: 210px;
+    height: 186px;
     top: 100px;
     right: 20px;
     display: flex;
@@ -64,28 +64,33 @@ body {
     align-items: center;
     background-color: #F8F2F2;
     z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
   
-  .map-toggle-btn:hover,
-  .map-toggle-btn:focus {
-    background-color: #eee;
-  }
-  
-  .map-toggle-btn {
-    position: inherit;
-    display: inherit;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    width: 100%;
-    height: auto;
-  }
-  
-  .map-toggle-btn img {
-    display: inherit;
-    width: 100%;
-    height: auto;
-  }
+ .map-toggle-btn:hover,
+.map-toggle-btn:focus {
+  background-color: #eeeeee00;
+}
+
+.map-toggle-btn {
+  position: inherit;
+  display: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0);
+}
+
+.map-toggle-btn img {
+  display: inherit;
+  width: 33px;
+  height: 37px;
+  background-color: transparent;
+}
   
   
   .commute-menu {
