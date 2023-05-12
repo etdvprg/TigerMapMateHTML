@@ -1,0 +1,297 @@
+<!--Main contributor: @etdvprg-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger MapMate</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="map.css">
+    <script src="navBtnResponsive.js"></script>
+    <script src="mapResponsive.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  const circle = document.querySelector('.e-icon');
+
+  if (localStorage.getItem('isCircleSelected') === 'true') {
+    circle.style.backgroundColor = 'grey';
+  } else {
+    circle.style.backgroundColor = '#F4C01E';
+  }
+});
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img class ="navbar-logo" src="images/logo.png">
+            </a>
+            <ul class="navbar-nav">
+                <div class="navbar-button" id="navbar-button">
+                    <span class="nav-text2">Explore the University!</span>
+                  </div>
+                  
+                  <div class="nav-dropdown-container" id="nav-dropdown-container">
+                    <ul>
+                      <li><a href="map.html">Map</a></li>
+                      <li><a href="edit-profile.html">Settings</a></li>
+                      <li><a href="schedule.html">Schedule</a></li>
+                      <li><a href="newsfeed.html">Newsfeed</a></li>
+                    </ul>
+                  </div>
+                  
+                <a href ="login-page.html">
+                    <div class="nav-profile-container">
+                        <span class="nav-text1">Guest</span>
+                        <div class="nav-profile-pfp">
+                            <img class="profile-picture" src="images/tigerDP.png" class="nav-link"></a>
+                        </div>
+                    </div>
+                </a>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="map-image-container">
+        <img class= "map-image" src="images/MarkedMap.png" alt="Map Image">
+    </div>
+
+    <div class="map-toggles">
+        <a href="commute-index.html"><button class="map-toggle-btn"><img src="images/commute.png" alt="Commute"></button></a>
+        <a href="school-index.html"><button class="map-toggle-btn"><img src="images/school.png" alt="School"></button></a>
+        <a href="hotspots-index.html"><button class="map-toggle-btn"><img src="images/hotspot.png" alt="Hotspot"></button></a>
+        <a href="bookmarks-index.html"><button class="map-toggle-btn"><img src="images/bookmark.png" alt="Bookmark"></button></a>
+    </div>
+
+    <div class="ust-e-menu-container">
+    <div class="ust-e-menu-header">
+
+      <a href="establishments-index.html">
+        <div class="back-button-e">
+            <img class="vector-toLeft" src="images/vector.svg" class="nav-link">
+        </div>
+    </a>
+
+      <div class="ust-e-menu-text">Establishments</div>
+      <div class="ust-e-navbar">
+        <div class="ust-e-navbar">
+          <div class="e-icon restaurants">
+            <img src="images/restaurant.png" alt="Restaurants">
+          </div>
+          <div class="e-icon groceries">
+            <img src="images/grocery.png" alt="Grocery">
+          </div>
+          <div class="e-icon study-spots">
+            <img src="images/study-spots.png" alt="Study Spots">
+          </div>
+          <div class="e-icon recreational-spots">
+            <img src="images/recreational-spots.png" alt="Recreational Spots">
+          </div>
+        </div>
+      </div>
+
+      <div class="ust-e-menu-search-bar">
+        <input type="text" placeholder="Search...">
+      </div>
+    </div>
+    
+      <div class="ust-e-menu-list">
+        <div class="ust-e-list result-1" data-rcard-id="1" data-img-src="images/24ChickenPin.png">
+          <div class="ust-e-list-img image-1"><img src="images/24chicken-espana.png"></div>
+          <div class="ust-e-list-tx text-1"> 24Chicken España </div>
+        </div>
+        <div class="ust-e-list result-2" data-rcard-id="2" data-img-src="images/AngkongPin.png">
+          <div class="ust-e-list-img image-2"><img src="images/angkong-pnoval.png"></div>
+          <div class="ust-e-list-tx text-2"> Angkong P. Noval </div>
+        </div>
+        <div class="ust-e-list result-3" data-rcard-id="3" data-img-src="images/ChowkingPin.png">
+          <div class="ust-e-list-img image-3"><img src="images/chowking-pnoval.png"></div>
+          <div class="ust-e-list-tx text-3"> Chowking UST </div>
+        </div>
+        <div class="ust-e-list result-4" data-rcard-id="4" data-img-src="images/KFCPin.png">
+          <div class="ust-e-list-img image-4"><img src="images/kfc-dapitan.png"></div>
+          <div class="ust-e-list-tx text-4"> KFC Dapitan </div>
+        </div>
+        <div class="ust-e-list result-5" data-rcard-id="5" data-img-src="images/TigerWinxPin.png">
+          <div class="ust-e-list-img image-5"><img src="images/tigerwinx-dapitan.png"></div>
+          <div class="ust-e-list-tx text-5"> TigerWinx Dapitan </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="restaurant-card-container" class="restaurant-card-container">
+      <div id="rcard-1" class="rcard">
+        <div class="rcard-header">
+          <div class="close-rcard-button">
+            <img class="close-btn" src="images/close.png">
+          </div>
+          <h2 class="rcard-title">24Chicken España</h2>
+        </div>
+        <div class="rcard-body">
+          <p class ="resto-info">
+            Padre Noval, 1008 España Blvd, <br>Sampaloc, Manila
+          </p>
+
+          <p class ="resto-info">
+            Timings: 10:00 AM to 9:00 PM
+          </p>
+
+          <p class ="resto-info">
+            Dine-in // Take-out
+          </p>
+
+          <p class ="resto-info">
+            Chicken, Rice 
+          </p>
+
+          <p class ="resto-info">
+            +63-977-425-3757
+          </p>
+
+          <p class ="resto-info">
+            Website: <a href="https://www.24chicken.com">24chicken.com</a>
+          </p>
+        </div>
+      </div>
+      <div id="rcard-2" class="rcard">
+        <div class="rcard-header">
+          <div class="close-rcard-button">
+            <img class="close-btn" src="images/close.png">
+          </div>
+          <h2 class="rcard-title">Angkong P. Noval</h2>
+        </div>
+        <div class="rcard-body">
+          <p class ="resto-info">
+            1223 Delos Reyes St, Sampaloc, Manila
+          </p>
+
+          <p class ="resto-info">
+            Timings: 9:00 AM to 9:00 PM
+          </p>
+
+          <p class ="resto-info">
+            Dine-in // Take-out
+          </p>
+
+          <p class ="resto-info">
+            Siomai, Rice 
+          </p>
+
+          <p class ="resto-info">
+            Website: <br><a href="https://www.facebook.com/angkongdimsum.ph/">https://www.facebook.com/<br>angkongdimsum.ph/</a>
+          </p>
+        </div>
+      </div>
+      <div id="rcard-3" class="rcard">
+        <div class="rcard-header">
+          <div class="close-rcard-button">
+            <img class="close-btn" src="images/close.png">
+          </div>
+          <h2 class="rcard-title">Chowking UST</h2>
+        </div>
+        <div class="rcard-body">
+          <p class ="resto-info">
+            M. Guerrero Drive, UST Campus, <br>Sampaloc, Manila
+          </p>
+
+          <p class ="resto-info">
+            Timings: 9:00 AM to 9:00 PM
+          </p>
+
+          <p class ="resto-info">
+            Dine-in // Take-out
+          </p>
+
+          <p class ="resto-info">
+            Chinese, Chicken, Dessert, Siomai, Rice 
+          </p>
+
+          <p class ="resto-info">
+            +63-2-8713-1156
+          </p>
+
+          <p>
+            Website:<br><a href="https://www.chowkingdelivery.com/">https://www.chowkingdelivery.com/</a>
+          </p>
+        </div>
+      </div>
+      <div id="rcard-4" class="rcard">
+        <div class="rcard-header">
+          <div class="close-rcard-button">
+            <img class="close-btn" src="images/close.png">
+          </div>
+          <h2 class="rcard-title">KFC Dapitan</h2>
+        </div>
+        <div class="rcard-body">
+          <p class ="resto-info">
+            1240 Dapitan St. Cor. V, Concepcion St, <br>Sampaloc, Manila
+          </p>
+
+          <p class ="resto-info">
+            Timings: 24 Hours
+          </p>
+
+          <p class ="resto-info">
+            Dine-in // Take-out
+          </p>
+
+          <p class ="resto-info">
+            Chicken, Rice
+          </p>
+
+          <p class ="resto-info">
+            +63-2-8887-8888
+          </p>
+
+          <p class ="resto-info">
+            Website: <a href="https://stores.kfc.com.ph/kfc-kfc-dapitan-2-fast-food-restaurant-sampaloc-manila-90683/Home">KFC Dapitan 2 Store Website</a>
+          </p>
+        </div>
+      </div>
+      <div id="rcard-5" class="rcard">
+        <div class="rcard-header">
+          <div class="close-rcard-button">
+            <img class="close-btn" src="images/close.png">
+          </div>
+          <h2 class="rcard-title">TigerWinx Dapitan</h2>
+        </div>
+        <div class="rcard-body">
+          <p class ="resto-info">
+            1240 Concepcion St, Sampaloc, Manila
+          </p>
+
+          <p class ="resto-info">
+            Timings: Mon-Sat: <br>10:00 AM to 09:00 PM, <br>Sun: 11:30AM to 09:00PM
+          </p>
+
+          <p class ="resto-info">
+            Dine-in // Take-out
+          </p>
+
+          <p class ="resto-info">
+            Chicken, Rice
+          </p>
+
+          <p class ="resto-info">
+            Website:<br><a href="https://www.facebook.com/tigerwinx2016/">https://www.facebook.com/tigerwinx2016/</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    
+      <div class="map-zoom-btn-container">
+        <div class="zoom-btn-in">
+          <img src="images/in.png" alt="Zoom In">
+        </div>
+        <div class="zoom-btn-out">
+          <img src="images/out.png" alt="Zoom Out">
+        </div>
+      </div>
+   
+</body>
+</html>
