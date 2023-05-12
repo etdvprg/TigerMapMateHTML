@@ -31,7 +31,7 @@ function addClass(element, /*class*/ name) {
     }
 }
 
-function removeClass(element, name) {
+export function removeClass(element, name) {
     var i, arr1, arr2;  
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");

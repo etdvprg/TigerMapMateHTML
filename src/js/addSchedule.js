@@ -1,4 +1,4 @@
-import {flickerClass} from '/src/js/ObjectFilter.js';
+import {removeClass} from '/src/js/ObjectFilter.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const addSchedule = document.querySelector('.add-schedule');
@@ -6,22 +6,22 @@ document.addEventListener("DOMContentLoaded", () => {
     var count = 4;
     addSchedule.addEventListener('click', () => {
         var newSched = document.createElement("div");
-        newSched.className = "schedule-item show" + " item-" + ++count;
-        newSched.textContent = "HI!";
+        newSched.className = "schedule-item show unedited" + " item-" + ++count;
+        newSched.textContent = "✏️";
         daySched.appendChild(newSched);
         //flickerClass("add-schedule");
     });
 });
 
-
+// Edit Schedule
 document.addEventListener("DOMContentLoaded", () => {
-    const addSchedule = document.querySelector('.add-schedule');
-    const daySched = document.getElementById("schedule-daily");
+    const scheduleItem = document.querySelector('.schedule-item');
+    var arr1 = scheduleItem.className.split(" ");
 
-    addSchedule.addEventListener('click', () => {
-        var newSched = document.createElement("div");
-        newSched.className = "schedule-item" + " item-1";
-        newSched.textContent = "HI!";
-        daySched.appendChild(newSched);
+    scheduleItem.addEventListener('click', () => {
+        console.log('You have Reached!');
+        if(arr1.indexOf('unedited') > -1) {
+            removeClass(scheduleItem, 'unedited');
+        }
     });
 });
