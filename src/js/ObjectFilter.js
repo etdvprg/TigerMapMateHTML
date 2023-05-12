@@ -47,3 +47,9 @@ function hideClass(className) {
     var x = document.getElementsByClassName(className);
     removeClass(x[0], className);
 }
+
+export function flickerClass(className) {
+    var c = document.getElementsByClassName(className)[0];
+    removeClass(c, 'show');
+    addClass(c, 'show');
+}

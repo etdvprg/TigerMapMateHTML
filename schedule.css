@@ -173,21 +173,11 @@
     cursor: pointer;
 }
 
-.item-1 {
-    display: flex;
-}
-.item-2 {
-    display: flex;
-}
-.item-3 {
-    display: flex;
-}
-.item-4 {
+.show {
     display: flex;
 }
 
-#add-schedule {
-    display: flex;
+.add-schedule {
     align-items: center;
     justify-content: center;
 
