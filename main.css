@@ -29,8 +29,8 @@ body {
 }
 
 .login-container {
-    left: 70%;
-    transform: translateX(-50%);
+    /* left: 70%;
+    transform: translateX(-50%); */
     justify-content: center;
     align-items: center;
     top: 25%;
@@ -38,7 +38,7 @@ body {
     height: 400px;
     display: flex;
     padding: 21px 9px;
-    position: absolute;
+    position: relative;
     box-shadow: 20px 20px 4px 0px rgba(0, 0, 0, 0.25) ;
     box-sizing: content-box;
     flex-shrink: 0;
@@ -75,10 +75,7 @@ body {
 
 
 .login-tmm-logo-img {
-    transform: translateX(50%) translateY(50%);
-    position: absolute;
-    left: 5%;
-    top: 10%;
+    position: relative;
     height: 300px;
     width: 300px;
 }
@@ -167,6 +164,16 @@ body {
   .login-forgot-password a:hover {
     text-decoration: underline;
   }
+
+#login-page {
+  display: flex;
+  width: auto;
+  height: auto;
+  padding-top: 5em;
+  
+  align-items: center;
+  justify-content: space-evenly;
+}
 
 .sign-up-button, .login-button {
     width: 60%;
