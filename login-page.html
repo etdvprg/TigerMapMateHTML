@@ -1,9 +1,4 @@
-<!--
-    Login-Page
-    Contributors:
-    evtdprg
-    Vladifish
--->
+<!--Main contributor: @etdvprg, Minor contributor: @Vladifish-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,21 +10,38 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="header.css">
+    <script src="navBtnResponsive.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
             <a class="navbar-brand" href="index.html">
-                <img class="navbar-logo" src="images/logo.png">
+                <img class ="navbar-logo" src="images/logo.png">
             </a>
             <ul class="navbar-nav">
-                <div class="nav-profile-container">
-                    <span class="nav-text1">Guest</span>
-                    <div class="nav-profile-pfp">
-                        <img class="profile-picture" src="images/tigerDP.png" class="nav-link"></a>
+                <div class="navbar-button" id="navbar-button">
+                    <span class="nav-text2">Explore the University!</span>
+                  </div>
+                  
+                  <div class="nav-dropdown-container" id="nav-dropdown-container">
+                    <ul>
+                      <li><a href="map.html">Map</a></li>
+                      <li><a href="edit-profile.html">Settings</a></li>
+                      <li><a href="schedule.html">Schedule</a></li>
+                      <li><a href="newsfeed.html">Newsfeed</a></li>
+                    </ul>
+                  </div>
+                  
+                <a href ="login-page.html">
+                    <div class="nav-profile-container">
+                        <span class="nav-text1">Guest</span>
+                        <div class="nav-profile-pfp">
+                            <img class="profile-picture" src="images/tigerDP.png" class="nav-link"></a>
+                        </div>
                     </div>
-                </div>
+                </a>
+                
             </ul>
         </nav>
     </header>

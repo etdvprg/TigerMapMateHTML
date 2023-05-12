@@ -45,8 +45,8 @@ header {
 
 .navbar-button {
     position: absolute;
-    left: 45%;
-    transform: translateX(-45%);
+    left: 50%;
+    transform: translateX(-50%);
     width: 450px;
     height: 10px;
     display: flex;
@@ -69,8 +69,8 @@ header {
   display: none;
   position: absolute;
   top: 81px;
-  left: 45%;
-  transform: translateX(-45%);
+  left: 50%;
+   transform: translateX(-50%);
   width: 220px;
   height: 150px;
   padding: 10px;

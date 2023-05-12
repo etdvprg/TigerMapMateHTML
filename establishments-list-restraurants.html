@@ -1,3 +1,4 @@
+<!--Main contributor: @etdvprg-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,10 +36,10 @@
                   
                   <div class="nav-dropdown-container" id="nav-dropdown-container">
                     <ul>
-                      <li><a href="index.html">Map</a></li>
-                      <li><a href="#">Settings</a></li>
-                      <li><a href="#">Schedule</a></li>
-                      <li><a href="#">Newsfeed</a></li>
+                      <li><a href="map.html">Map</a></li>
+                      <li><a href="edit-profile.html">Settings</a></li>
+                      <li><a href="schedule.html">Schedule</a></li>
+                      <li><a href="newsfeed.html">Newsfeed</a></li>
                     </ul>
                   </div>
                   
@@ -56,7 +57,7 @@
     </header>
 
     <div class="map-image-container">
-        <img class = "map-image" src="images/MarkedMap.png" alt="Map Image">
+        <img class= "map-image" src="images/MarkedMap.png" alt="Map Image">
     </div>
 
     <div class="map-toggles">
@@ -98,32 +99,191 @@
       </div>
     </div>
     
-
-
       <div class="ust-e-menu-list">
-        <div class="ust-e-list result-1">
+        <div class="ust-e-list result-1" data-rcard-id="1" data-img-src="images/24ChickenPin.png">
           <div class="ust-e-list-img image-1"><img src="images/24chicken-espana.png"></div>
           <div class="ust-e-list-tx text-1"> 24Chicken España </div>
         </div>
-        <div class="ust-e-list result-2">
+        <div class="ust-e-list result-2" data-rcard-id="2" data-img-src="images/AngkongPin.png">
           <div class="ust-e-list-img image-2"><img src="images/angkong-pnoval.png"></div>
           <div class="ust-e-list-tx text-2"> Angkong P. Noval </div>
         </div>
-        <div class="ust-e-list result-3">
+        <div class="ust-e-list result-3" data-rcard-id="3" data-img-src="images/ChowkingPin.png">
           <div class="ust-e-list-img image-3"><img src="images/chowking-pnoval.png"></div>
-          <div class="ust-e-list-tx text-3"> Chowking QPav </div>
+          <div class="ust-e-list-tx text-3"> Chowking UST </div>
         </div>
-        <div class="ust-e-list result-4">
+        <div class="ust-e-list result-4" data-rcard-id="4" data-img-src="images/KFCPin.png">
           <div class="ust-e-list-img image-4"><img src="images/kfc-dapitan.png"></div>
           <div class="ust-e-list-tx text-4"> KFC Dapitan </div>
         </div>
-        <div class="ust-e-list result-5">
+        <div class="ust-e-list result-5" data-rcard-id="5" data-img-src="images/TigerWinxPin.png">
           <div class="ust-e-list-img image-5"><img src="images/tigerwinx-dapitan.png"></div>
           <div class="ust-e-list-tx text-5"> TigerWinx Dapitan </div>
         </div>
       </div>
     </div>
-      
+
+    <div id="restaurant-card-container" class="restaurant-card-container">
+      <div id="rcard-1" class="rcard">
+        <div class="rcard-header">
+          <div class="close-rcard-button">
+            <img class="close-btn" src="images/close.png">
+          </div>
+          <h2 class="rcard-title">24Chicken España</h2>
+        </div>
+        <div class="rcard-body">
+          <p class ="resto-info">
+            Padre Noval, 1008 España Blvd, <br>Sampaloc, Manila
+          </p>
+
+          <p class ="resto-info">
+            Timings: 10:00 AM to 9:00 PM
+          </p>
+
+          <p class ="resto-info">
+            Dine-in // Take-out
+          </p>
+
+          <p class ="resto-info">
+            Chicken, Rice 
+          </p>
+
+          <p class ="resto-info">
+            +63-977-425-3757
+          </p>
+
+          <p class ="resto-info">
+            Website: <a href="https://www.24chicken.com">24chicken.com</a>
+          </p>
+        </div>
+      </div>
+      <div id="rcard-2" class="rcard">
+        <div class="rcard-header">
+          <div class="close-rcard-button">
+            <img class="close-btn" src="images/close.png">
+          </div>
+          <h2 class="rcard-title">Angkong P. Noval</h2>
+        </div>
+        <div class="rcard-body">
+          <p class ="resto-info">
+            1223 Delos Reyes St, Sampaloc, Manila
+          </p>
+
+          <p class ="resto-info">
+            Timings: 9:00 AM to 9:00 PM
+          </p>
+
+          <p class ="resto-info">
+            Dine-in // Take-out
+          </p>
+
+          <p class ="resto-info">
+            Siomai, Rice 
+          </p>
+
+          <p class ="resto-info">
+            Website: <br><a href="https://www.facebook.com/angkongdimsum.ph/">https://www.facebook.com/<br>angkongdimsum.ph/</a>
+          </p>
+        </div>
+      </div>
+      <div id="rcard-3" class="rcard">
+        <div class="rcard-header">
+          <div class="close-rcard-button">
+            <img class="close-btn" src="images/close.png">
+          </div>
+          <h2 class="rcard-title">Chowking UST</h2>
+        </div>
+        <div class="rcard-body">
+          <p class ="resto-info">
+            M. Guerrero Drive, UST Campus, <br>Sampaloc, Manila
+          </p>
+
+          <p class ="resto-info">
+            Timings: 9:00 AM to 9:00 PM
+          </p>
+
+          <p class ="resto-info">
+            Dine-in // Take-out
+          </p>
+
+          <p class ="resto-info">
+            Chinese, Chicken, Dessert, Siomai, Rice 
+          </p>
+
+          <p class ="resto-info">
+            +63-2-8713-1156
+          </p>
+
+          <p>
+            Website:<br><a href="https://www.chowkingdelivery.com/">https://www.chowkingdelivery.com/</a>
+          </p>
+        </div>
+      </div>
+      <div id="rcard-4" class="rcard">
+        <div class="rcard-header">
+          <div class="close-rcard-button">
+            <img class="close-btn" src="images/close.png">
+          </div>
+          <h2 class="rcard-title">KFC Dapitan</h2>
+        </div>
+        <div class="rcard-body">
+          <p class ="resto-info">
+            1240 Dapitan St. Cor. V, Concepcion St, <br>Sampaloc, Manila
+          </p>
+
+          <p class ="resto-info">
+            Timings: 24 Hours
+          </p>
+
+          <p class ="resto-info">
+            Dine-in // Take-out
+          </p>
+
+          <p class ="resto-info">
+            Chicken, Rice
+          </p>
+
+          <p class ="resto-info">
+            +63-2-8887-8888
+          </p>
+
+          <p class ="resto-info">
+            Website: <a href="https://stores.kfc.com.ph/kfc-kfc-dapitan-2-fast-food-restaurant-sampaloc-manila-90683/Home">KFC Dapitan 2 Store Website</a>
+          </p>
+        </div>
+      </div>
+      <div id="rcard-5" class="rcard">
+        <div class="rcard-header">
+          <div class="close-rcard-button">
+            <img class="close-btn" src="images/close.png">
+          </div>
+          <h2 class="rcard-title">TigerWinx Dapitan</h2>
+        </div>
+        <div class="rcard-body">
+          <p class ="resto-info">
+            1240 Concepcion St, Sampaloc, Manila
+          </p>
+
+          <p class ="resto-info">
+            Timings: Mon-Sat: <br>10:00 AM to 09:00 PM, <br>Sun: 11:30AM to 09:00PM
+          </p>
+
+          <p class ="resto-info">
+            Dine-in // Take-out
+          </p>
+
+          <p class ="resto-info">
+            Chicken, Rice
+          </p>
+
+          <p class ="resto-info">
+            Website:<br><a href="https://www.facebook.com/tigerwinx2016/">https://www.facebook.com/tigerwinx2016/</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    
       <div class="map-zoom-btn-container">
         <div class="zoom-btn-in">
           <img src="images/in.png" alt="Zoom In">

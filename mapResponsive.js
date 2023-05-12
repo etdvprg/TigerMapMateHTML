@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const listItems = document.querySelectorAll('.ust-b-list');
 const cardContainer = document.getElementById('card-container');
@@ -53,26 +54,19 @@ grayOut.className = 'gray-out';
 document.body.appendChild(grayOut);
 
 function showCard(cardId) {
-  // Show the card with the given ID
   const card = document.getElementById(cardId);
   cardContainer.style.display = 'block';
   card.style.display = 'block';
-
-  // Gray out the rest of the website
   grayOut.style.display = 'block';
 }
 
 function hideCard() {
-  // Hide the card and un-gray the website
   cardContainer.style.display = 'none';
   grayOut.style.display = 'none';
 
-  // Hide all the cards
   const cards = cardContainer.querySelectorAll('.card');
   cards.forEach(card => card.style.display = 'none');
 }
-
-// Add click event listeners to the list items
 listItems.forEach(listItem => {
   const cardId = listItem.getAttribute('data-card-id');
 
@@ -82,11 +76,85 @@ listItems.forEach(listItem => {
   });
 });
 
-// Add click event listener to the gray out element
 grayOut.addEventListener('click', () => {
   hideCard();
 });
 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const restaurantCards = document.querySelectorAll('.restaurant-card');
+  const restaurantListItems = document.querySelectorAll('.ust-e-list');
+  const cardContainer = document.querySelector('.restaurant-card-container');
+
+  for (let i = 0; i < restaurantListItems.length; i++) {
+    const listItem = restaurantListItems[i];
+    const cardIndex = parseInt(listItem.getAttribute('data-index'));
+    const card = document.querySelector(`.restaurant-card.result-${cardIndex}`);
+
+    listItem.addEventListener('click', () => {
+      card.classList.toggle('visible');
+      cardContainer.classList.add('active');
+    });
+
+    const closeButton = card.querySelector('.close-card-button');
+    closeButton.addEventListener('click', () => {
+      card.classList.remove('visible');
+      cardContainer.classList.remove('active');
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+const restaurantListItems = document.querySelectorAll('.ust-e-list');
+const restaurantCardContainer = document.getElementById('restaurant-card-container');
+restaurantListItems.forEach(function(item) {
+
+  item.addEventListener('click', function() {
+    const rcardId = item.getAttribute('data-rcard-id');
+    const restaurantCard = document.getElementById(`rcard-${rcardId}`);
+
+    restaurantCardContainer.style.display = 'block';
+    restaurantCard.style.display = 'block';
+
+    const closeButton = restaurantCard.querySelector('.close-rcard-button');
+    closeButton.addEventListener('click', function() {
+      restaurantCardContainer.style.display = 'none';
+      restaurantCard.style.display = 'none';
+    });
+  });
+});
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the map image element
+const mapImage = document.querySelector(".map-image");
+
+// Get all the ust-e-list elements
+const ustEListItems = document.querySelectorAll(".ust-e-list");
+
+// Add a click event listener to each ust-e-list element
+ustEListItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    // Get the value of the data-img-src attribute of the selected ust-e-list item
+    const imgSrc = item.getAttribute("data-img-src");
+    // Update the src attribute of the map image element with the selected image src
+    mapImage.src = imgSrc;
+  });
+});
+})
+
+document.addEventListener("DOMContentLoaded", function() {
+  const closeButtons = document.querySelectorAll('.close-rcard-button');
+
+  closeButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const mapImage = document.querySelector('.map-image');
+      mapImage.setAttribute('src', 'images/MarkedMap.png');
+    });
+  });
+  
+})
+
 
 

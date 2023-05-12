@@ -1,0 +1,163 @@
+#schedule-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+#schedule-title {
+    display: flex;
+    
+    width: 400px;
+    height: 75px;
+    transform: translate(0, 1em);
+    background-color: rgb(235, 221, 102);
+    border-radius: 12px;
+    border: 1px solid rgb(94, 94, 94);
+
+    align-items: center;
+    justify-content: center;
+
+    /*Fonts */
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+}
+
+#schedule-feed-container {
+    width: 1440px;
+    height: 500px;
+    
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 12px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+#schedule-calendar {
+    width: 300px;
+    height: 350px;
+    /* background-color: black; */
+
+    display: flex;
+    justify-content: stretch;
+    overflow: hidden;
+    flex-wrap: wrap;
+    padding: 6px;
+}
+
+.calendar-day {
+    width: 40px;
+    height: 40px;
+    background-color: #F8D57E;
+    border-radius: 4px;
+    text-align: center;
+    margin: 1px;
+}
+
+.prev-month-text {
+    color:rgba(82, 82, 82, 0.836);
+}
+
+.calendar-day-of-week {
+    width: 40px;
+    height: 25px;
+    background-color: #F8D57E;
+    border-radius: 4px;
+    text-align: center;
+    margin: 1px;
+}
+
+.calendar-heading {
+    width: 300px;
+    height: auto;
+    text-align: center;
+}
+
+/* Daily Schedule Formats */
+
+.schedule-list {
+    width: 500px;
+    height: 500px;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    overflow: auto;
+}
+
+.schedule-item {
+    width: 450px;
+    height: 85px;
+    display: none;
+    position: relative;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25) ;
+    box-sizing: content-box;
+
+    /* align-items: center; */
+    align-self: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-shrink: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 15px;
+    
+    background-color: rgb(235, 221, 102);
+}
+
+.schedule-daily-heading {
+    font-weight: bold;
+}
+
+.left-field {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+.right-field {
+    display: flex;
+    align-items: flex-end;
+}
+
+.show {
+    display: flex;
+}
+
+.subject-logo {
+    width: 40px;
+    height: 35px;
+    text-align: center;
+    align-items: center;
+    padding-top: 5px;
+    justify-items: center;
+    background-color: beige;
+    border-radius: 6px;
+}
+
+.subject-content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.delete-button {
+    width: 24px;
+    height: 80px;
+    text-align: center;
+    background-color: rgb(253, 161, 40);
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
