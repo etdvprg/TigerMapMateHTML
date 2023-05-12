@@ -173,16 +173,22 @@
     cursor: pointer;
 }
 
-.item-1 {
-    display: flex;
-}
-.item-2 {
-    display: flex;
-}
-.item-3 {
-    display: flex;
-}
-.item-4 {
+.show {
     display: flex;
 }
 
+.add-schedule {
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    font-size: 24px;
+}
+
+.unedited {
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    font-size: 24px;
+}

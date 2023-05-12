@@ -18,6 +18,7 @@
     <script src="navBtnResponsive.js"></script>
     <script src="CalendarDayGenerator.js"></script>
     <script src="ObjectFilter.js"></script>
+    <script type="module" src="src\js\addSchedule.js"></script>
 </head>
 
 <body onload="generateCalendar(2, 31, 30); displayAll();">
@@ -66,7 +67,9 @@
                     <h2>Today's Schedule</h2>
                     <p style="color: #F4C01E;">Friday, May 12 </p>
                 </div>
-                
+                <button class="schedule-item add-schedule show">
+                    +
+                </button>
                 <div class="schedule-item item-1">
                     <div class="left-field">
                         <button class="delete-button" onclick="hideClass('item-1');">❌</button>

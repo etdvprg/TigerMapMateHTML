@@ -31,7 +31,7 @@ function addClass(element, /*class*/ name) {
     }
 }
 
-function removeClass(element, name) {
+export function removeClass(element, name) {
     var i, arr1, arr2;  
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");
@@ -46,4 +46,15 @@ function removeClass(element, name) {
 function hideClass(className) {
     var x = document.getElementsByClassName(className);
     removeClass(x[0], className);
+}
+
+export function flickerClass(className) {
+    var c = document.getElementsByClassName(className)[0];
+    removeClass(c, 'show');
+    var delayInMilliseconds = 1000;
+    setTimeout(function() {
+        // Thank you stack overflow
+        addClass(c, 'show');
+      }, delayInMilliseconds);
+    
 }
