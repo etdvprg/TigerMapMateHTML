@@ -22,7 +22,6 @@
     box-sizing: content-box;
     /* overflow: hidden; */
     overflow-y: auto;
-    border: 1px solid rgb(94, 94, 94);
     
     border-radius: 18px;
     background-color: rgba(255, 255, 255, 1);
@@ -140,7 +139,6 @@
     transform: translate(0, 1em);
     background-color: rgb(235, 221, 102);
     border-radius: 12px;
-    border: 1px solid rgb(94, 94, 94);
 
     align-items: center;
     justify-content: center;
