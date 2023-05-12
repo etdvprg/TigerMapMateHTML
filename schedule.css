@@ -93,6 +93,8 @@
     align-content: center;
 }
 
+/* Daily - Schedule Contents */
+
 .schedule-item {
     width: 80%;
     height: 85px;
@@ -115,7 +117,10 @@
     background-color: rgb(235, 221, 102);
 }
 
-/* Daily - Schedule Contents */
+.schedule-item:hover {
+    background-color: rgb(250, 228, 35);
+}
+
 .schedule-daily-heading {
     font-weight: bold;
     text-align: center;
@@ -131,10 +136,6 @@
 .right-field {
     display: flex;
     align-items: flex-end;
-}
-
-.show {
-    display: flex;
 }
 
 .subject-logo {
@@ -156,7 +157,7 @@
 }
 
 .delete-button {
-    width: 24px;
+    width: 30px;
     height: 80px;
     text-align: center;
     background-color: rgb(253, 161, 40);
@@ -169,5 +170,19 @@
 
 .delete-button:hover {
     background-color: rgba(255, 46, 46, 0.74);
+    cursor: pointer;
+}
+
+.item-1 {
+    display: flex;
+}
+.item-2 {
+    display: flex;
+}
+.item-3 {
+    display: flex;
+}
+.item-4 {
+    display: flex;
 }
 

@@ -42,3 +42,8 @@ function removeClass(element, name) {
     }
     element.className = arr1.join(" ");
 }
+
+function hideClass(className) {
+    var x = document.getElementsByClassName(className);
+    removeClass(x[0], className);
+}
