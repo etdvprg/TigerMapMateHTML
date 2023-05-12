@@ -1,0 +1,189 @@
+<!--Main contributor: @etdvprg, Minor contributor: @Mejji-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger MapMate</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="map.css">
+    <script src="navBtnResponsive.js"></script>
+    <script src="mapResponsive.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img class ="navbar-logo" src="images/logo.png">
+            </a>
+            <ul class="navbar-nav">
+                <div class="navbar-button" id="navbar-button">
+                    <span class="nav-text2">Explore the University!</span>
+                  </div>
+                  
+                  <div class="nav-dropdown-container" id="nav-dropdown-container">
+                    <ul>
+                      <li><a href="map.html">Map</a></li>
+                      <li><a href="edit-profile.html">Settings</a></li>
+                      <li><a href="schedule.html">Schedule</a></li>
+                      <li><a href="newsfeed.html">Newsfeed</a></li>
+                    </ul>
+                  </div>
+                  
+                <a href ="login-page.html">
+                    <div class="nav-profile-container">
+                        <span class="nav-text1">Guest</span>
+                        <div class="nav-profile-pfp">
+                            <img class="profile-picture" src="images/tigerDP.png" class="nav-link"></a>
+                        </div>
+                    </div>
+                </a>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="map-image-container">
+        <img class = "map-image" src="images/FrassatiPin.png" alt="Map Image">
+    </div>
+
+    <div class="map-toggles">
+        <a href="commute-index.html"><button class="map-toggle-btn"><img src="images/commute.png" alt="Commute"></button></a>
+        <a href="school-index.html"><button class="map-toggle-btn"><img src="images/school.png" alt="School"></button></a>
+        <a href="hotspots-index.html"><button class="map-toggle-btn"><img src="images/hotspot.png" alt="Hotspot"></button></a>
+        <a href="bookmarks-index.html"><button class="map-toggle-btn"><img src="images/bookmark.png" alt="Bookmark"></button></a>
+    </div>
+
+    <div class="ust-b-menu-container">
+      <div class="ust-b-menu-header">
+        <div class="ust-b-menu-text">UST Administration & Campus Buildings</div>
+        <div class="ust-b-menu-search-bar">
+          <input type="text" placeholder="Search for a building...">
+        </div>
+      </div>
+      
+      <div class="ust-b-menu-list">
+        <div class="ust-b-list result-1" data-card-id="card-1">
+          <div class="ust-b-list-img image-1"><img src="images/school.png"></div>
+          <div class="ust-b-list-tx text-1"> Blessed Giorgio Frassati Building </div>
+        </div>
+
+        <div class="ust-b-list result-2" data-card-id="card-2">
+          <div class="ust-b-list-img image-2"><img src="images/cics.png"></div>
+          <div class="ust-b-list-tx text-2"> College of Information and Computing Sciences (CICS) </div>
+        </div>
+
+        <div class="ust-b-list result-3" data-card-id="card-3">
+          <div class="ust-b-list-img image-3"><img src="images/cics.png"></div>
+          <div class="ust-b-list-tx text-3"> Computer Science </div>
+        </div>
+
+        <div class="ust-b-list result-4" data-card-id="card-4">
+          <div class="ust-b-list-img image-4"><img src="images/cics.png"></div>
+          <div class="ust-b-list-tx text-4"> Information Systems </div>
+        </div>
+
+        <div class="ust-b-list result-5" data-card-id="card-5">
+          <div class="ust-b-list-img image-5"><img src="images/cics.png"></div>
+          <div class="ust-b-list-tx text-5"> Information Technology </div>
+        </div>
+
+        <div class="ust-b-list result-6" data-card-id="card-6">
+          <div class="ust-b-list-img image-6"><img src="images/shs.png"></div>
+          <div class="ust-b-list-tx text-6"> Senior High School (SHS) </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="card-container" class="card-container">
+      <div id="card-1" class="card">
+        <div class="card-header">
+          <h2>Blessed Giorgio Frassati Building</h2>
+        </div>
+        <div class="card-body">
+          <p>The Blessed Pier Giorgio Frassati Building of the University of Santo Tomas was formally inaugurated on December 10, 2021. It currently houses the
+          UST Senior High School, and the College of Information of Computing Sciences (CICS). It stands between Extramadura Street and Cayco Street.
+        </p>
+        </div>
+        
+      </div>
+    
+      <div id="card-2" class="card">
+        <div class="card-header">
+          <h2>College of Information and Computing Sciences (CICS)</h2>
+        </div>
+        <div class= "card-body">
+          <p>The College occupies the Seventeenth floor and onwards of the building, and its office is currently located in the Second floor.</p>
+        <p>Contact Number: +63-2-8786-1611 local 8518</p>
+        <p>Email Address: cics@ust.edu.ph</p>
+        <p>Office Hours: Mon - Sat, 07:00 AM -- 12:00 PM, 01:00PM -- 05:00PM</p>
+        <a href="https://www.ust.edu.ph//information-and-computing-sciences/"><p>UST Website: https://www.ust.edu.ph//information-and-computing-sciences/</p></a>
+        <a href="https://www.facebook.com/USTCICS2014Official/"><p>Facebook Website: https://www.facebook.com/USTCICS2014Official/</p></a>
+        </div> 
+      </div>
+
+      <div id="card-3" class="card">
+        <div class="card-header">
+          <h2>Computer Science</h2>
+        </div>
+        <div class="card-body">
+          <p>The Department of Computer Scinece, under CICS, is housed in the Frassati building.</p>
+        <p>Current Computer Science Chair: Asst. Prof. Jose L. Seño, MSCS</p>
+        <a href="https://www.ust.edu.ph//information-and-computing-sciences/department-of-computer-science/">
+          <p>UST Website: https://www.ust.edu.ph//information-and-computing-sciences/department-of-computer-science/</p></a>
+        </div>
+         </div>
+
+      <div id="card-4" class="card">
+        <div class="card-header">
+          <h2>Information Systems</h2>
+        </div>
+        <div class="card-body">
+           <p>The Department of Information Systems, under CICS, is housed in the Frassati building.</p>
+        <p>Current Information Systems Chair: Inst. Alma V. Perol, MIT</p>
+        <a href="https://www.ust.edu.ph//information-and-computing-sciences/department-of-information-systems/">
+          <p>UST Website: https://www.ust.edu.ph//information-and-computing-sciences/department-of-information-systems/</p></a>
+        </div>
+       </div>
+
+      <div id="card-5" class="card">
+        <div class="card-header">
+          <h2>Information Technology</h2>
+        </div>
+        <div class="card-body">
+          <p>The Department of Information Technology, under CICS, is housed in the Frassati building.</p>
+        <p>Current Information Technology Chair: Asst. Prof. Eugenia R. Zhuo, DIT</p>
+        <a href="https://www.ust.edu.ph/academics/programs/bachelor-of-science-in-information-technology/">
+          <p>UST Website: https://www.ust.edu.ph/academics/programs/bachelor-of-science-in-information-technology/</p></a>
+        </div>
+        
+      </div>
+
+      <div id="card-6" class="card">
+        <div class="card-header">
+         <h2>Senior High School (SHS)</h2> 
+        </div>
+        <div class="card-body">
+          <p>The Senior High School occupies the Fourth floor and onwards of the building</p>
+        <p>Contact Number: +63-2-8786-1611 local 8179</p>
+        <p>Email Address: office.shs@ust.edu.ph</p>
+        <p>Office Hours: Mon - Fri, 07:00 AM -- 12:00 PM, 01:00PM -- 05:00PM</p>
+        <a href="https://www.ust.edu.ph/senior-high-school/"><p>UST Website: https://www.ust.edu.ph/senior-high-school/</p></a>
+        <a href="https://www.facebook.com/ustshs.official"><p>Facebook Website: https://www.facebook.com/ustshs.official</p></a>
+        </div>
+          </div>
+
+    </div>
+      
+      <div class="map-zoom-btn-container">
+        <div class="zoom-btn-in">
+          <img src="images/in.png" alt="Zoom In">
+        </div>
+        <div class="zoom-btn-out">
+          <img src="images/out.png" alt="Zoom Out">
+        </div>
+      </div>
+   
+</body>
+</html>

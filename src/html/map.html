@@ -1,0 +1,86 @@
+<!--Main contributor: @etdvprg, Minor contributor: @Vladifish-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger MapMate</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="map.css">
+    <script src="navBtnResponsive.js"></script>
+    <script src="mapResponsive.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img class ="navbar-logo" src="images/logo.png">
+            </a>
+            <ul class="navbar-nav">
+                <div class="navbar-button" id="navbar-button">
+                    <span class="nav-text2">Explore the University!</span>
+                  </div>
+                  
+                  <div class="nav-dropdown-container" id="nav-dropdown-container">
+                    <ul>
+                      <li><a href="map.html">Map</a></li>
+                      <li><a href="edit-profile.html">Settings</a></li>
+                      <li><a href="schedule.html">Schedule</a></li>
+                      <li><a href="newsfeed.html">Newsfeed</a></li>
+                    </ul>
+                  </div>
+                  
+                <a href ="login-page.html">
+                    <div class="nav-profile-container">
+                        <span class="nav-text1">Guest</span>
+                        <div class="nav-profile-pfp">
+                            <img class="profile-picture" src="images/tigerDP.png" class="nav-link"></a>
+                        </div>
+                    </div>
+                </a>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="map-image-container">
+        <img class = "map-image" src="images/MarkedMap.png" alt="Map Image">
+    </div>
+
+    <div class="map-toggles">
+            <a href="commute-index.html">
+                <div class="map-toggle-btn">
+                  <img src="images/commute.png" alt="Commute">
+                </div>
+              </a>
+            <a href="ust-buildings-index.html">
+                <div class="map-toggle-btn">
+                  <img src="images/school.png" alt="Commute">
+                </div>
+              </a>
+            <a href="establishments-index.html">
+                <div class="map-toggle-btn">
+                  <img src="images/hotspot.png" alt="Commute">
+                </div>
+              </a>
+            <a href="bookmarks-index.html">
+                <div class="map-toggle-btn">
+                  <img src="images/bookmark.png" alt="Bookmark">
+                </div>
+              </a>
+    </div>
+      
+
+    <div class="map-zoom-btn-container">
+      <div class="zoom-btn-in">
+        <img src="images/in.png" alt="Zoom In">
+      </div>
+      <div class="zoom-btn-out">
+        <img src="images/out.png" alt="Zoom Out">
+      </div>
+    </div>
+    
+</body>
+</html>
