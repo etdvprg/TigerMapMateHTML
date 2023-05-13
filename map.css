@@ -730,7 +730,7 @@ body {
   position: absolute;
   display: none; 
   z-index: 3;
-  top: 200px;
+  top: 375px;
   left: 10px;
 }
 
@@ -1046,9 +1046,9 @@ body {
 
 .bookmark-card-container {
   position: absolute;
-  display: block; 
+  display: none; 
   z-index: 3;
-  top: 200px;
+  top: 375px;
   left: 10px;
 }
 
@@ -1066,11 +1066,7 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.bcard.show {
-  display: block;
-}
-
-.close-rcard-button {
+.close-bcard-button {
   position: absolute;
   top: 7.5px;
   right: 15px;

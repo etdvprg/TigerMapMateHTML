@@ -83,29 +83,6 @@ grayOut.addEventListener('click', () => {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-  const restaurantCards = document.querySelectorAll('.restaurant-card');
-  const restaurantListItems = document.querySelectorAll('.ust-e-list');
-  const cardContainer = document.querySelector('.restaurant-card-container');
-
-  for (let i = 0; i < restaurantListItems.length; i++) {
-    const listItem = restaurantListItems[i];
-    const cardIndex = parseInt(listItem.getAttribute('data-index'));
-    const card = document.querySelector(`.restaurant-card.result-${cardIndex}`);
-
-    listItem.addEventListener('click', () => {
-      card.classList.toggle('visible');
-      cardContainer.classList.add('active');
-    });
-
-    const closeButton = card.querySelector('.close-card-button');
-    closeButton.addEventListener('click', () => {
-      card.classList.remove('visible');
-      cardContainer.classList.remove('active');
-    });
-  }
-});
-
-document.addEventListener("DOMContentLoaded", function() {
 const restaurantListItems = document.querySelectorAll('.ust-e-list');
 const restaurantCardContainer = document.getElementById('restaurant-card-container');
 restaurantListItems.forEach(function(item) {
@@ -179,5 +156,30 @@ overlay.addEventListener('click', () => {
 });
 
 
-})
+});
 
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  const bookmarkListItems = document.querySelectorAll('.bookmark')
+  const bookmarkCardContainer = document.querySelector('.bookmark-card-container');
+  bookmarkListItems.forEach(function(item) {
+
+    item.addEventListener('click', function() {
+      const bcardId = item.getAttribute('data-bcard-id');
+      const bookmarkCard = document.getElementById(`bcard-${bcardId}`);
+
+      bookmarkCardContainer.style.display = 'block';
+      bookmarkCard.style.display = 'block';
+
+      const closeButton = bookmarkCard.querySelector('.close-bcard-button');
+      closeButton.addEventListener('click', function() {
+        bookmarkCardContainer.style.display = 'none';
+        bookmarkCard.style.display = 'none';
+      });
+
+    });
+
+  });
+
+  });
