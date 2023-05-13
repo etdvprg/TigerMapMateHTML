@@ -2,25 +2,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 1em;
     gap: 2em;
 }
 
 #schedule-title {
     display: flex;
     
-    width: 400px;
+    width: 30%;
     height: 75px;
-    transform: translate(0, 1em);
-    background-color: rgb(235, 221, 102);
+    transform: translate(0, 0);
+    background-color: rgba(36, 36, 36, 1);
     border-radius: 12px;
-    border: 1px solid rgb(94, 94, 94);
 
     align-items: center;
     justify-content: center;
 
     /*Fonts */
+    color: #fff;
     font-family: "Poppins", sans-serif;
     font-size: 24px;
+    text-align: center;
+    /* font-weight: bold; */
 }
 
 #schedule-feed-container {
@@ -34,7 +37,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-bottom: 3em;
     padding-left: 1em;
     padding-right: 1em;
@@ -114,11 +117,11 @@
     cursor: pointer;
     padding: 15px;
     
-    background-color: rgb(235, 221, 102);
+    background-color: #F8D57E;
 }
 
 .schedule-item:hover {
-    background-color: rgb(250, 228, 35);
+    background-color: rgba(244, 192, 30, 1);
 }
 
 .schedule-daily-heading {
