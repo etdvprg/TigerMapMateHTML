@@ -835,7 +835,7 @@ body {
 
 .bookmark {
   width: 350px;
-  height: 160px;
+  height: auto;
   position: inherit;
   background: #F4C01E;
   border-radius: 20px;
@@ -1074,7 +1074,9 @@ body {
 }
 
 .bcard-title {
-
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .bcard-body {
@@ -1082,14 +1084,62 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(255, 255, 255);
-  width: 350px;
+  width: 300px;
   height: auto;
   border-radius: 18px;
   margin: auto;
   flex-direction: column;
-  margin-bottom: 10px;
-
+  margin-bottom: 40px;
 }
+
+.bookmark-edit {
+  display: block;
+  background-color: #ffd99f;
+  width: 250px;
+  height: 45px;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.bkmrk-edit-text {
+  font-weight: 800;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+}
+
+.bkmrk-edit-icon {
+  left: 20px;
+  display: flex;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bkmrk-edit-icon img {
+  max-width: 50%;
+  max-height: 50%;
+  display: block;
+  margin: auto;
+}
+
 
 
 
