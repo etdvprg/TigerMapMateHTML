@@ -83,25 +83,33 @@ grayOut.addEventListener('click', () => {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-const restaurantListItems = document.querySelectorAll('.ust-e-list');
-const restaurantCardContainer = document.getElementById('restaurant-card-container');
-restaurantListItems.forEach(function(item) {
+  const restaurantListItems = document.querySelectorAll('.ust-e-list');
+  const restaurantCardContainer = document.getElementById('restaurant-card-container');
+  let currentRestaurantCard = null;
 
-  item.addEventListener('click', function() {
-    const rcardId = item.getAttribute('data-rcard-id');
-    const restaurantCard = document.getElementById(`rcard-${rcardId}`);
+  restaurantListItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      const rcardId = item.getAttribute('data-rcard-id');
+      const restaurantCard = document.getElementById(`rcard-${rcardId}`);
 
-    restaurantCardContainer.style.display = 'block';
-    restaurantCard.style.display = 'block';
+      if (currentRestaurantCard) {
+        currentRestaurantCard.style.display = 'none';
+      }
 
-    const closeButton = restaurantCard.querySelector('.close-rcard-button');
-    closeButton.addEventListener('click', function() {
-      restaurantCardContainer.style.display = 'none';
-      restaurantCard.style.display = 'none';
+      restaurantCardContainer.style.display = 'block';
+      restaurantCard.style.display = 'block';
+
+      const closeButton = restaurantCard.querySelector('.close-rcard-button');
+      closeButton.addEventListener('click', function() {
+        restaurantCardContainer.style.display = 'none';
+        restaurantCard.style.display = 'none';
+      });
+
+      currentRestaurantCard = restaurantCard;
     });
   });
 });
-});
+
 
 document.addEventListener("DOMContentLoaded", function() {
   // Get the map image element
@@ -163,23 +171,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const bookmarkListItems = document.querySelectorAll('.bookmark')
   const bookmarkCardContainer = document.querySelector('.bookmark-card-container');
+  let currentCard;
+
   bookmarkListItems.forEach(function(item) {
 
     item.addEventListener('click', function() {
       const bcardId = item.getAttribute('data-bcard-id');
       const bookmarkCard = document.getElementById(`bcard-${bcardId}`);
 
+      if (currentCard) {
+        currentCard.style.display = 'none';
+      }
+
       bookmarkCardContainer.style.display = 'block';
       bookmarkCard.style.display = 'block';
+      currentCard = bookmarkCard;
 
       const closeButton = bookmarkCard.querySelector('.close-bcard-button');
       closeButton.addEventListener('click', function() {
         bookmarkCardContainer.style.display = 'none';
         bookmarkCard.style.display = 'none';
+        currentCard = null;
       });
 
     });
 
   });
 
-  });
+});
+
