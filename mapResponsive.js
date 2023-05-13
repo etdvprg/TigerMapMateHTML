@@ -233,6 +233,37 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+  // Get the map image element
+const mapImage = document.querySelector(".map-image");
+
+// Get all the ust-e-list elements
+const bookmarks = document.querySelectorAll(".bookmark");
+
+// Add a click event listener to each ust-e-list element
+bookmarks.forEach((item) => {
+  item.addEventListener("click", () => {
+    // Get the value of the data-img-src attribute of the selected ust-e-list item
+    const imgSrc = item.getAttribute("data-img-src");
+    // Update the src attribute of the map image element with the selected image src
+    mapImage.src = imgSrc;
+  });
+});
+})
+
+document.addEventListener("DOMContentLoaded", function() {
+  const closeButtons = document.querySelectorAll('.close-bcard-button');
+
+  closeButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const mapImage = document.querySelector('.map-image');
+      mapImage.setAttribute('src', 'images/MarkedMap.png');
+    });
+  });
+  
+})
+
+
+document.addEventListener("DOMContentLoaded", function() {
   function getWeather() {
     const API_KEY = "pzRaENEiK4CDsS5IBItFg6BNzckGon2A";
     const CITY = "Manila";
