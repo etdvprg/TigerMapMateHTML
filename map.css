@@ -91,6 +91,27 @@ body {
   height: 37px;
   background-color: transparent;
 }
+
+.weather-container {
+  font-family: "Poppins", sans-serif;
+  width: 50px;
+  height: 35px;
+  background-color: #F8F2F2;
+  text-align: center;
+  border-radius: 10px;
+  top: 300px;
+  right: 19px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.weather-temp {
+  font-weight: bold;
+  font-size: 12.5px;
+}
   
   
   .commute-menu {

@@ -231,3 +231,26 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const API_KEY = "pzRaENEiK4CDsS5IBItFg6BNzckGon2A";
+  const CITY = "Manila";
+  const API_URL = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${API_KEY}&q=${CITY}`;
+
+  const weatherTemp = document.querySelector(".weather-temp");
+
+  fetch(API_URL)
+    .then((response) => response.json())
+    .then((data) => {
+      const locationKey = data[0].Key;
+      const CURRENT_CONDITIONS_URL = `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${API_KEY}&details=true`;
+
+      return fetch(CURRENT_CONDITIONS_URL);
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      const temp = data[0].Temperature.Metric.Value;
+
+      weatherTemp.innerHTML = `${temp} °C`;
+    });
+});
