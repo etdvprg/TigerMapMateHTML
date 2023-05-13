@@ -25,6 +25,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+  const commuteDropdownButton = document.querySelector("  .commute-dropdown-button-espana");
+  const commuteDropdown = document.querySelector(".commute-dropdown-container-espana");
+
+  commuteDropdownButton.addEventListener("click", function() {
+  commuteDropdown.classList.toggle("visible");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
   const pnrRouteDropdownButton = document.querySelector(".pnr-route-dropdown-button");
   const pnrRouteDropdown = document.querySelector(".pnr-route-dropdown-container");
 
