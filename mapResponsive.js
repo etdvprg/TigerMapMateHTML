@@ -162,8 +162,6 @@ overlay.addEventListener('click', () => {
   bookmarkAddForm.style.display = 'none';
   overlay.style.display = 'none';
 });
-
-
 });
 
 
@@ -200,3 +198,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  const bookmarkEditButton = document.querySelector('.bookmark-edit');
+  const bookmarkEditForm = document.querySelector('.bookmark-edit-form');
+  const overlay = document.createElement('div');
+  overlay.classList.add('overlay');
+  document.body.appendChild(overlay);
+
+  bookmarkEditButton.addEventListener('click', () => {
+    bookmarkEditForm.style.display = 'block';
+  overlay.style.display = 'block';
+  });
+
+  document.getElementById('cancel-be-btn').addEventListener('click', () => {
+    bookmarkEditForm.style.display = 'none';
+    overlay.style.display = 'none';
+  });
+  
+  overlay.addEventListener('click', () => {
+    bookmarkEditForm.style.display = 'none';
+    overlay.style.display = 'none';
+  });
+
+});

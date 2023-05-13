@@ -109,6 +109,7 @@
         <button type="submit" id="add-b-btn">Add Bookmark</button>
         <button type="button" id="cancel-b-btn">Cancel</button>
       </div>
+
     </div>
 
     <div id="bookmark-card-container" class="bookmark-card-container">
@@ -127,12 +128,16 @@
                 Edit a Bookmark!
               </div>
             </div>
+
             <div class="bookmark-icon l1">
               🏠
             </div>
-            <div class="bookmark-b-h l1"><h3>Place H</h3></div>
-            <div class="bookmark-b-l l1"><p>Padre Noval Street, Sampaloc, Manila</p></div>
-            <div class="bookmark-b-d l1"><p><em>"home sweet dorm"</em></p></div>
+
+            <div class="bcard-body-text">
+              <p class="bcard-location">Padre Noval Street, Sampaloc, Manila</p>
+              <p><em>"home sweet dorm"</em>
+            </div>
+
           </div>
         </div>
       </div>
@@ -142,7 +147,7 @@
           <div class="close-bcard-button">
             <img class="close-btn" src="images/close.png">
           </div>
-          <h2 class="bcard-title">Place C</h2>
+          <h2 class="bcard-title">Place H</h2>
           <div class="bcard-body">
             <div class="bookmark-edit">
               <div class="bkmrk-edit-icon">
@@ -151,6 +156,15 @@
               <div class="bkmrk-edit-text">
                 Edit a Bookmark!
               </div>
+            </div>
+
+            <div class="bookmark-icon l1">
+              👯
+            </div>
+
+            <div class="bcard-body-text">
+                <p class="bcard-location">Dapitan Street, Sampaloc, Manila</p>
+                <p><em>"favorite hangout spot"</em>
             </div>
 
           </div>
@@ -162,7 +176,7 @@
           <div class="close-bcard-button">
             <img class="close-btn" src="images/close.png">
           </div>
-          <h2 class="bcard-title">Place I</h2>
+          <h2 class="bcard-title">Place H</h2>
           <div class="bcard-body">
             <div class="bookmark-edit">
               <div class="bkmrk-edit-icon">
@@ -173,11 +187,42 @@
               </div>
             </div>
 
+            <div class="bookmark-icon l1">
+              🏠
+            </div>
+
+            <div class="bcard-body-text">
+              <p class="bcard-location">Padre Noval Street, Sampaloc, Manila</p>
+              <p><em>"favorite restaurant"</em>
+            </div>
+
           </div>
         </div>
       </div>
+    
     </div>
   
+    <div class="bookmark-edit-form" id="bookmark-edit-form">
+
+      <div class="bookmark-ed-h">
+        <h3>Edit Bookmark</h3>
+      </div>
+
+      <div class="bookmark-ed-b">
+        <label for="name" id="bookmark-ed-label">Name:</label>
+        <input type="text" name="name" id="bookmark-ed-text" placeholder="Name">
+        <label for="address" id="bookmark-ed-label">Address:</label>
+        <input type="text" id="bookmark-ed-text" id="address" placeholder="Address">
+        <label for="description" id="bookmark-ed-label">Description:</label>
+        <textarea type="text" name="description" id="bookmark-ed-text" placeholder="Description"></textarea>
+        <label for="icon" id="bookmark-ed-label">Icon (Emoji):</label>
+        <input type="icon" name="name" id="bookmark-ed-icon" accept="image/*" maxlength="1">
+        <button type="submit" id="edit-b-btn">Edit Bookmark</button>
+        <button type="button" id="cancel-be-btn">Cancel</button>
+      </div>
+      
+    </div>
+
       <div class="map-zoom-btn-container">
         <div class="zoom-btn-in">
           <img src="images/in.png" alt="Zoom In">
