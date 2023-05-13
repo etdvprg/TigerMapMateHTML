@@ -55,7 +55,7 @@ header {
     height: 10px;
     display: flex;
     opacity: 0.8;
-    padding: 21px 9px;
+    padding: 21px 10px;
     box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.12999999523162842) ;
     align-items: center;
     flex-shrink: 0;
@@ -66,6 +66,7 @@ header {
 
 .navbar-button:hover {
   cursor: pointer;
+  background-color: rgb(250, 228, 35);
 }
 
 
@@ -127,13 +128,13 @@ header {
 }
   
 .profile-picture {
-    /* top: 15px;
-    right: 5px;
+    /*right: 5px;
     border-radius: 50%;
     margin-right: 10px; */
 
-    width: 50px;
-    height: 50px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
     opacity: 1;
     position: relative;
     
@@ -159,26 +160,24 @@ header {
 }
 
 .nav-profile-container {
-  top: 10px;
   right: 35px;
   width: 150px;
   height: 20px;
   display: flex;
   opacity: 1;
 
-  padding: 20px 10px;
+  padding: 15px 10px;
   position: absolute;
   
   box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.12999999523162842) ;
   
   flex-shrink: 0;
   border-radius: 24px;
-  padding-right: 21px 9px;
+  padding-right: 9px;
   
   background-color: rgba(244, 192, 30, 1);
 
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  align-self: stretch;
 }
