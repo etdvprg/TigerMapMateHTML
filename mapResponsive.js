@@ -83,48 +83,33 @@ grayOut.addEventListener('click', () => {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-  const restaurantCards = document.querySelectorAll('.restaurant-card');
   const restaurantListItems = document.querySelectorAll('.ust-e-list');
-  const cardContainer = document.querySelector('.restaurant-card-container');
+  const restaurantCardContainer = document.getElementById('restaurant-card-container');
+  let currentRestaurantCard = null;
 
-  for (let i = 0; i < restaurantListItems.length; i++) {
-    const listItem = restaurantListItems[i];
-    const cardIndex = parseInt(listItem.getAttribute('data-index'));
-    const card = document.querySelector(`.restaurant-card.result-${cardIndex}`);
+  restaurantListItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      const rcardId = item.getAttribute('data-rcard-id');
+      const restaurantCard = document.getElementById(`rcard-${rcardId}`);
 
-    listItem.addEventListener('click', () => {
-      card.classList.toggle('visible');
-      cardContainer.classList.add('active');
-    });
+      if (currentRestaurantCard) {
+        currentRestaurantCard.style.display = 'none';
+      }
 
-    const closeButton = card.querySelector('.close-card-button');
-    closeButton.addEventListener('click', () => {
-      card.classList.remove('visible');
-      cardContainer.classList.remove('active');
-    });
-  }
-});
+      restaurantCardContainer.style.display = 'block';
+      restaurantCard.style.display = 'block';
 
-document.addEventListener("DOMContentLoaded", function() {
-const restaurantListItems = document.querySelectorAll('.ust-e-list');
-const restaurantCardContainer = document.getElementById('restaurant-card-container');
-restaurantListItems.forEach(function(item) {
+      const closeButton = restaurantCard.querySelector('.close-rcard-button');
+      closeButton.addEventListener('click', function() {
+        restaurantCardContainer.style.display = 'none';
+        restaurantCard.style.display = 'none';
+      });
 
-  item.addEventListener('click', function() {
-    const rcardId = item.getAttribute('data-rcard-id');
-    const restaurantCard = document.getElementById(`rcard-${rcardId}`);
-
-    restaurantCardContainer.style.display = 'block';
-    restaurantCard.style.display = 'block';
-
-    const closeButton = restaurantCard.querySelector('.close-rcard-button');
-    closeButton.addEventListener('click', function() {
-      restaurantCardContainer.style.display = 'none';
-      restaurantCard.style.display = 'none';
+      currentRestaurantCard = restaurantCard;
     });
   });
 });
-});
+
 
 document.addEventListener("DOMContentLoaded", function() {
   // Get the map image element
@@ -179,5 +164,39 @@ overlay.addEventListener('click', () => {
 });
 
 
-})
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  const bookmarkListItems = document.querySelectorAll('.bookmark')
+  const bookmarkCardContainer = document.querySelector('.bookmark-card-container');
+  let currentCard;
+
+  bookmarkListItems.forEach(function(item) {
+
+    item.addEventListener('click', function() {
+      const bcardId = item.getAttribute('data-bcard-id');
+      const bookmarkCard = document.getElementById(`bcard-${bcardId}`);
+
+      if (currentCard) {
+        currentCard.style.display = 'none';
+      }
+
+      bookmarkCardContainer.style.display = 'block';
+      bookmarkCard.style.display = 'block';
+      currentCard = bookmarkCard;
+
+      const closeButton = bookmarkCard.querySelector('.close-bcard-button');
+      closeButton.addEventListener('click', function() {
+        bookmarkCardContainer.style.display = 'none';
+        bookmarkCard.style.display = 'none';
+        currentCard = null;
+      });
+
+    });
+
+  });
+
+});
 
