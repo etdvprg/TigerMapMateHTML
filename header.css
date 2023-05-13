@@ -181,3 +181,8 @@ header {
   align-items: center;
   align-content: center;
 }
+
+.nav-profile-container:hover {
+  cursor: pointer;
+  background-color: rgb(250, 228, 35);
+}
