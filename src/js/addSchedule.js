@@ -1,27 +1,32 @@
-import {removeClass} from '/src/js/ObjectFilter.js';
+import {addClass} from '/src/js/ObjectFilter.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const addSchedule = document.querySelector('.add-schedule');
     const daySched = document.getElementById("schedule-daily");
-    var count = 4;
     addSchedule.addEventListener('click', () => {
         var newSched = document.createElement("div");
-        newSched.className = "schedule-item show unedited" + " item-" + ++count;
+        newSched.className = "schedule-item show unedited";
         newSched.textContent = "✏️";
+        newSched.addEventListener('click', editSchedule);
         daySched.appendChild(newSched);
-        //flickerClass("add-schedule");
     });
 });
 
-// Edit Schedule
 document.addEventListener("DOMContentLoaded", () => {
-    const scheduleItem = document.querySelector('.schedule-item');
-    var arr1 = scheduleItem.className.split(" ");
-
-    scheduleItem.addEventListener('click', () => {
-        console.log('You have Reached!');
-        if(arr1.indexOf('unedited') > -1) {
-            removeClass(scheduleItem, 'unedited');
-        }
+    const editSchedule = document.getElementById('edit-btn');
+    editSchedule.addEventListener('click', () => {
+        nuclearBomb();
     });
 });
+
+function editSchedule() {
+    let container = document.getElementsByClassName('schedule-add-form')[0];
+    container.style.display = "flex";
+    console.log(container.className)
+    console.log(container.textContent);
+    
+}
+
+function nuclearBomb() {
+    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+}
