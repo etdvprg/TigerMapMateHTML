@@ -25,6 +25,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+  const commuteDropdownButton = document.querySelector("  .commute-dropdown-button-espana");
+  const commuteDropdown = document.querySelector(".commute-dropdown-container-espana");
+
+  commuteDropdownButton.addEventListener("click", function() {
+  commuteDropdown.classList.toggle("visible");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
   const pnrRouteDropdownButton = document.querySelector(".pnr-route-dropdown-button");
   const pnrRouteDropdown = document.querySelector(".pnr-route-dropdown-container");
 
@@ -162,8 +171,6 @@ overlay.addEventListener('click', () => {
   bookmarkAddForm.style.display = 'none';
   overlay.style.display = 'none';
 });
-
-
 });
 
 
@@ -200,3 +207,86 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  const bookmarkEditButton = document.querySelector('.bookmark-edit');
+  const bookmarkEditForm = document.querySelector('.bookmark-edit-form');
+  const overlay = document.createElement('div');
+  overlay.classList.add('overlay');
+  document.body.appendChild(overlay);
+
+  bookmarkEditButton.addEventListener('click', () => {
+    bookmarkEditForm.style.display = 'block';
+  overlay.style.display = 'block';
+  });
+
+  document.getElementById('cancel-be-btn').addEventListener('click', () => {
+    bookmarkEditForm.style.display = 'none';
+    overlay.style.display = 'none';
+  });
+  
+  overlay.addEventListener('click', () => {
+    bookmarkEditForm.style.display = 'none';
+    overlay.style.display = 'none';
+  });
+
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the map image element
+const mapImage = document.querySelector(".map-image");
+
+// Get all the ust-e-list elements
+const bookmarks = document.querySelectorAll(".bookmark");
+
+// Add a click event listener to each ust-e-list element
+bookmarks.forEach((item) => {
+  item.addEventListener("click", () => {
+    // Get the value of the data-img-src attribute of the selected ust-e-list item
+    const imgSrc = item.getAttribute("data-img-src");
+    // Update the src attribute of the map image element with the selected image src
+    mapImage.src = imgSrc;
+  });
+});
+})
+
+document.addEventListener("DOMContentLoaded", function() {
+  const closeButtons = document.querySelectorAll('.close-bcard-button');
+
+  closeButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const mapImage = document.querySelector('.map-image');
+      mapImage.setAttribute('src', 'images/MarkedMap.png');
+    });
+  });
+  
+})
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  function getWeather() {
+    const API_KEY = "pzRaENEiK4CDsS5IBItFg6BNzckGon2A";
+    const CITY = "Manila";
+    const API_URL = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${API_KEY}&q=${CITY}`;
+  
+    const weatherTemp = document.querySelector(".weather-temp");
+  
+    fetch(API_URL)
+      .then((response) => response.json())
+      .then((data) => {
+        const locationKey = data[0].Key;
+        const CURRENT_CONDITIONS_URL = `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${API_KEY}&details=true`;
+  
+        return fetch(CURRENT_CONDITIONS_URL);
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        const temp = data[0].Temperature.Metric.Value;
+  
+        weatherTemp.innerHTML = `${temp}°C`;
+      });
+  }
+  
+  window.onload = getWeather;
+
+});
