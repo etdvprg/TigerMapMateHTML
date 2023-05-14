@@ -720,6 +720,11 @@ body {
   height: 75px;
 }
 
+.e-icon:hover{
+  background-color: #D39C00;
+  transform: scale(1.05);
+}
+
 .e-icon::before {
   content: "";
   display: block;
@@ -787,7 +792,12 @@ body {
   margin-bottom: 10px;
   cursor: pointer;
 }
-
+.ust-e-list:hover{
+  background-color: #F2B705;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  transition: all 0.2s ease-in-out;
+}
 
 .ust-e-list-tx {
   flex: 1;
@@ -927,6 +937,10 @@ body {
   cursor: pointer;
 }
 
+.bookmark:hover {
+  background-color: #D39C00;
+}
+
 .bookmark-b-h {
   text-align: center;
   font-weight: 600;
@@ -945,6 +959,12 @@ body {
   overflow: hidden;
   position: relative;
   cursor: pointer;
+}
+
+.bookmark-add:hover {
+  background-color: #D39C00;
+  transform: scale(1.05);
+
 }
 
 .bkmrk-add-plus {
@@ -1132,6 +1152,7 @@ body {
   top: 375px;
   left: 10px;
 }
+
 
 .bcard {
   display: none;
