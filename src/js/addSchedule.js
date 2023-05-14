@@ -12,6 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const editSchedule = document.getElementById('edit-btn');
+    editSchedule.addEventListener('click', () => {
+        nuclearBomb();
+    });
+});
+
 function editSchedule() {
     let container = document.getElementsByClassName('schedule-add-form')[0];
     container.style.display = "flex";
