@@ -1,9 +1,8 @@
-import {removeClass} from '/src/js/ObjectFilter.js';
+import {addClass} from '/src/js/ObjectFilter.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const addSchedule = document.querySelector('.add-schedule');
     const daySched = document.getElementById("schedule-daily");
-    var count = 4;
     addSchedule.addEventListener('click', () => {
         var newSched = document.createElement("div");
         newSched.className = "schedule-item show unedited";
@@ -14,5 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function editSchedule() {
+    let container = document.getElementsByClassName('schedule-add-form')[0];
+    container.style.display = "flex";
+    console.log(container.className)
+    console.log(container.textContent);
+    
+}
+
+function nuclearBomb() {
     window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 }
