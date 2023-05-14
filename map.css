@@ -72,6 +72,7 @@ body {
  .map-toggle-btn:hover,
 .map-toggle-btn:focus {
   background-color: #eeeeee00;
+  transform: scale(1.05);
 }
 
 .map-toggle-btn {
