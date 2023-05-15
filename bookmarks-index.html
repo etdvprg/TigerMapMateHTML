@@ -12,6 +12,23 @@
     <link rel="stylesheet" type="text/css" href="map.css">
     <script src="navBtnResponsive.js"></script>
     <script src="mapResponsive.js"></script>
+    <script>
+  const inputs = document.querySelectorAll('input[name="emoji-input"]');
+  
+  inputs.forEach(input => {
+    input.addEventListener('input', (event) => {
+      const value = input.value;
+      
+      // Remove any non-emoji characters
+      const emoji = value.replace(/[^\p{Emoji}]/gu, '');
+      
+      // If the emoji is longer than 1 character, truncate it
+      if (emoji.length > 1) {
+        input.value = emoji.slice(0, 2);
+      }
+    });
+  });
+</script>
 </head>
 <body>
     <header>
@@ -122,7 +139,7 @@
         <label for="description" id="bookmark-af-label">Description:</label>
         <textarea type="text" name="description" id="bookmark-af-text" placeholder="Description"></textarea>
         <label for="icon" id="bookmark-af-label">Icon (Emoji):</label>
-        <input type="icon" name="name" id="bookmark-af-icon" accept="image/*" maxlength="1">
+        <input type="text" id="bookmark-af-icon" name="emoji-input" pattern="[\p{Emoji}]*" maxlength="2">
         <button type="submit" id="add-b-btn">Add Bookmark</button>
         <button type="button" id="cancel-b-btn">Cancel</button>
       </div>
@@ -233,7 +250,7 @@
         <label for="description" id="bookmark-ed-label">Description:</label>
         <textarea type="text" name="description" id="bookmark-ed-text" placeholder="Description"></textarea>
         <label for="icon" id="bookmark-ed-label">Icon (Emoji):</label>
-        <input type="icon" name="name" id="bookmark-ed-icon" accept="image/*" maxlength="1">
+        <input type="icon" id="bookmark-ed-icon" name="emoji-input" pattern="[\p{Emoji}]*" maxlength="2">
         <button type="submit" id="edit-b-btn">Edit Bookmark</button>
         <button type="button" id="cancel-be-btn">Cancel</button>
       </div>
