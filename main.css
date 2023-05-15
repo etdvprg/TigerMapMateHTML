@@ -188,6 +188,10 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.sign-up-button:hover{
+    background-color: #F2B705;
+}
+
 .sign-up-button {
     background-color: rgba(244, 192, 30, 1);
 }
@@ -202,6 +206,7 @@ body {
     align-items: center;
     height: 100%;
 }
+
 
 a {
     text-decoration: none;

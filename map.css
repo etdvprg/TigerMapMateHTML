@@ -1114,6 +1114,9 @@ body {
   width: 200px;
   height: 40px;
 }
+#add-b-btn:hover {
+  background-color: #D39C00;
+}
 
 #cancel-b-btn {
   margin-top: 10px;
@@ -1129,7 +1132,9 @@ body {
   width: 200px;
   height: 40px;
 }
-
+#cancel-b-btn:hover {
+  background-color: #D63900;
+}
 #bookmark-af-icon {
     margin-left: 10px;
     margin-right: 10px;
@@ -1206,6 +1211,9 @@ body {
   overflow: hidden;
   position: relative;
   cursor: pointer;
+}
+.bookmark-edit:hover {
+  background-color: #F2B705;
 }
 
 .bkmrk-edit-text {
