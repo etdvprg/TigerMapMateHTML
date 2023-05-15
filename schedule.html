@@ -56,6 +56,23 @@
     <div id="schedule-page">
         
         <div class="schedule-add-form">
+            <script>
+                const inputs = document.querySelectorAll('input[name="emoji-input"]');
+                
+                inputs.forEach(input => {
+                  input.addEventListener('input', (event) => {
+                    const value = input.value;
+                    
+                    // Remove any non-emoji characters
+                    const emoji = value.replace(/[^\p{Emoji}]/gu, '');
+                    
+                    // If the emoji is longer than 1 character, truncate it
+                    if (emoji.length > 1) {
+                      input.value = emoji.slice(0, 2);
+                    }
+                  });
+                });
+              </script>
             <div class="bookmark-af-h">
                 <h3>Edit Schedule</h3>
               </div>
@@ -67,7 +84,7 @@
                 <label for="description" id="bookmark-af-label">Description:</label>
                 <textarea type="text" name="description" id="bookmark-af-text" placeholder="Description"></textarea>
                 <label for="icon" id="bookmark-af-label">Icon (Emoji):</label>
-                <input type="icon" name="name" id="bookmark-af-icon" accept="image/*" maxlength="1">
+                <input type="text" id="bookmark-af-icon" name="emoji-input" pattern="[\p{Emoji}]*" maxlength="2">
                 <button type="submit" id="edit-btn">Edit Schedule</button>
                 <button type="button" id="cancel-b-btn">Cancel</button>
               </div>
