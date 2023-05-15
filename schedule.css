@@ -217,6 +217,9 @@
     border-radius: 18px;
     width: 400px;
     height: 600px;
+
+    flex-direction: column;
+    text-align: center;
   }
 
   .overlay {
@@ -229,3 +232,101 @@
     z-index: 6;
     display: none;
   }
+
+  #bookmark-af-text {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 75%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(36, 36, 36, 1);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+#bookmark-af-label {
+    margin-top: 10px;
+  }
+
+
+  .bookmark-af-b {
+    flex-direction: column;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 350px;
+    height: auto;
+    border-radius: 18px;
+    margin: auto;
+  }
+
+  #bookmark-af-icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 15%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(36, 36, 36, 1);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+  #cancel-b-btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #FF5733;
+    box-shadow: 0px 4px 4px -3px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    width: 200px;
+    height: 40px;
+  }
+
+  #cancel-b-btn:hover {
+    background: #dd4725;
+  }
+
+  #edit-btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #F4C01E;
+    box-shadow: 0px 4px 4px -3px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    width: 200px;
+    height: 40px;
+  }
+
+  #edit-btn:hover {
+    background: #ddac19;
+  }
+
+#overlay {
+    background: #00000083;
+    opacity: 100%;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    z-index: 50;
+}

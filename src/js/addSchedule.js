@@ -19,14 +19,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const cancelButton = document.getElementById('cancel-b-btn');
+    cancelButton.addEventListener('click', () => {
+        let container = document.getElementsByClassName('schedule-add-form')[0];
+        container.style.display = "none";
+        let overlay = document.getElementById('overlay');
+        overlay.style.display = "none";
+        
+    });
+});
+
 function editSchedule() {
     let container = document.getElementsByClassName('schedule-add-form')[0];
     container.style.display = "flex";
-    console.log(container.className)
-    console.log(container.textContent);
-    
+    let overlay = document.getElementById('overlay');
+    overlay.style.display = "flex";
 }
 
 function nuclearBomb() {
     window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 }
+
