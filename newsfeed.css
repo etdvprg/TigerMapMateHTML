@@ -109,13 +109,14 @@
     height: 88.857; 
     position: relative;
     border-radius: 10px;
+    margin-bottom: 12px;
 }
 
-.feed-text{
+.feed-text, .feedbox-title {
     left: 10px;
+    height: 25px;
     
     color: rgb(29, 29, 29);
-    height: auto;
     position: relative;
     font-size: 12px;
     font-style: SemiBold;
@@ -125,6 +126,11 @@
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
+}
+
+.feedbox-title {
+    text-overflow: ellipsis;
+    margin-bottom: 2.5em;
 }
 
 #newsfeed-title {
