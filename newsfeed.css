@@ -2,30 +2,31 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 .page-container {
+    top: 30px;
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: flex-start;
 }
-.feed-container {
-    top: 30px;
-    width: 80%;
-    height: 500px;
 
+.feed-container {
+    width: 75%;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 0.05em;
     padding: 10px 92px 20px 92px; /* T R B L */
-    position: relative;
+    position: absolute;
+    top: 120px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     box-shadow: 20px 20px 4px 0px rgba(0, 0, 0, 0.25) ;
     box-sizing: content-box;
-    /* overflow: hidden; */
     overflow-y: auto;
-    
     border-radius: 18px;
     background-color: rgba(255, 255, 255, 1);
-}
+    }
 
 .feedbox-part {
     display: flex;
@@ -108,13 +109,14 @@
     height: 88.857; 
     position: relative;
     border-radius: 10px;
+    margin-bottom: 12px;
 }
 
-.feed-text{
+.feed-text, .feedbox-title {
     left: 10px;
+    height: 25px;
     
     color: rgb(29, 29, 29);
-    height: auto;
     position: relative;
     font-size: 12px;
     font-style: SemiBold;
@@ -124,6 +126,11 @@
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
+}
+
+.feedbox-title {
+    text-overflow: ellipsis;
+    margin-bottom: 2.5em;
 }
 
 #newsfeed-title {

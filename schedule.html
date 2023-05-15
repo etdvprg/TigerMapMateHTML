@@ -50,9 +50,50 @@
             </ul>
         </nav>
     </header>
+    <div id="overlay">
 
+    </div>
     <div id="schedule-page">
+        
+        <div class="schedule-add-form">
+            <script>
+                const inputs = document.querySelectorAll('input[name="emoji-input"]');
+                
+                inputs.forEach(input => {
+                  input.addEventListener('input', (event) => {
+                    const value = input.value;
+                    
+                    // Remove any non-emoji characters
+                    const emoji = value.replace(/[^\p{Emoji}]/gu, '');
+                    
+                    // If the emoji is longer than 1 character, truncate it
+                    if (emoji.length > 1) {
+                      input.value = emoji.slice(0, 2);
+                    }
+                  });
+                });
+              </script>
+            <div class="bookmark-af-h">
+                <h3>Edit Schedule</h3>
+              </div>
+              <div class="bookmark-af-b">
+                <label for="name" id="bookmark-af-label">Name:</label>
+                <input type="text" name="name" id="bookmark-af-text" placeholder="Name">
+                <label for="address" id="bookmark-af-label">Address:</label>
+                <input type="text" id="bookmark-af-text" id="address" placeholder="Address">
+                <label for="description" id="bookmark-af-label">Description:</label>
+                <textarea type="text" name="description" id="bookmark-af-text" placeholder="Description"></textarea>
+                <label for="icon" id="bookmark-af-label">Icon (Emoji):</label>
+                <input type="text" id="bookmark-af-icon" name="emoji-input" pattern="[\p{Emoji}]*" maxlength="2">
+                <button type="submit" id="edit-btn">Edit Schedule</button>
+                <button type="button" id="cancel-b-btn">Cancel</button>
+              </div>
+        </div>
+
+        
+
         <div id="schedule-feed-container">
+            
             <div id="schedule-calendar">
                 <h2 class="calendar-heading">May</h1>
             </div>
@@ -64,60 +105,74 @@
                 <button class="schedule-item add-schedule show">
                     +
                 </button>
+                <div class="schedule-item item-0">
+                    <div class="left-field">
+                        <button class="delete-button" onclick="hideClass('item-0');">❌</button>
+                        <div class="subject-logo">🏀</div>
+                        <div class="subject-content">
+                            PATHFIT <br>
+                            Mr. Alvir <br>
+                            Frassati Building
+                        </div>
+                    </div>
+                    <div class="right-field">
+                        7:30-9:30
+                    </div>
+                </div>
                 <div class="schedule-item item-1">
                     <div class="left-field">
                         <button class="delete-button" onclick="hideClass('item-1');">❌</button>
                         <div class="subject-logo">💻</div>
                         <div class="subject-content">
-                            ICS2606 <br>
+                            2606 <br>
                             Ms. Dela Cruz <br>
                             Frassati Building
                         </div>
                     </div>
                     <div class="right-field">
-                        10:00
+                        10:00-11:45
                     </div>
                 </div>
                 <div class="schedule-item item-2">
                     <div class="left-field">
                         <button class="delete-button" onclick="hideClass('item-2');">❌</button>
-                        <div class="subject-logo">💻</div>
+                        <div class="subject-logo">📅</div>
                         <div class="subject-content">
-                            ICS2606 <br>
-                            Ms. Dela Cruz <br>
+                            2605 <br>
+                            Mr. Tabs <br>
                             Frassati Building
                         </div>
                     </div>
                     <div class="right-field">
-                        10:00
+                        12:30-1:30
                     </div>
                 </div>
                 <div class="schedule-item item-3">
                     <div class="left-field">
                         <button class="delete-button" onclick="hideClass('item-3');">❌</button>
-                        <div class="subject-logo">💻</div>
+                        <div class="subject-logo">☕</div>
                         <div class="subject-content">
-                            ICS2606 <br>
-                            Ms. Dela Cruz <br>
+                            2602 <br>
+                            Mr. Abilities <br>
                             Frassati Building
                         </div>
                     </div>
                     <div class="right-field">
-                        10:00
+                        14:00-16:00
                     </div>
                 </div>
                 <div class="schedule-item item-4">
                     <div class="left-field">
                         <button class="delete-button" onclick="hideClass('item-4');">❌</button>
-                        <div class="subject-logo">💻</div>
+                        <div class="subject-logo">✈️</div>
                         <div class="subject-content">
-                            ICS2606 <br>
-                            Ms. Dela Cruz <br>
+                            2604 <br>
+                            Mr. Bilas <br>
                             Frassati Building
                         </div>
                     </div>
                     <div class="right-field">
-                        10:00
+                        18:00-22:00
                     </div>
                 </div>
             </div>

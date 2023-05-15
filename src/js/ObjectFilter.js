@@ -20,7 +20,7 @@ function filterObject (c, type) {
     }
 }
 
-function addClass(element, /*class*/ name) {
+export function addClass(element, /*class*/ name) {
     var i, arr1, arr2;
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");

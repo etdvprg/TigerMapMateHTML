@@ -13,6 +13,7 @@ function generateCalendar(startingDay, endingDay, lastMonthEnd) {
 
     // Generates the days
     var dayCount = lastMonthEnd;
+    const currDay = 12;
     for (var i=1; i<36; i++) {
         var day = document.createElement("div");
 
@@ -20,6 +21,10 @@ function generateCalendar(startingDay, endingDay, lastMonthEnd) {
             day.className = "calendar-day prev-month-text";
         } else {
             day.className = "calendar-day";
+        }
+
+        if(i==currDay) {
+            day.className += " curr-day";
         }
 
         if (i == startingDay) { /*May starts on monday so 2nd block yung 1 */
