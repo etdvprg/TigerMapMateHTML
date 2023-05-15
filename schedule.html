@@ -50,13 +50,15 @@
             </ul>
         </nav>
     </header>
+    <div id="overlay">
 
+    </div>
     <div id="schedule-page">
+        
         <div class="schedule-add-form">
             <div class="bookmark-af-h">
-                <h3>Add a Bookmark</h3>
+                <h3>Edit Schedule</h3>
               </div>
-        
               <div class="bookmark-af-b">
                 <label for="name" id="bookmark-af-label">Name:</label>
                 <input type="text" name="name" id="bookmark-af-text" placeholder="Name">
@@ -70,6 +72,9 @@
                 <button type="button" id="cancel-b-btn">Cancel</button>
               </div>
         </div>
+
+        
+
         <div id="schedule-feed-container">
             
             <div id="schedule-calendar">
@@ -83,60 +88,74 @@
                 <button class="schedule-item add-schedule show">
                     +
                 </button>
+                <div class="schedule-item item-0">
+                    <div class="left-field">
+                        <button class="delete-button" onclick="hideClass('item-1');">❌</button>
+                        <div class="subject-logo">🏀</div>
+                        <div class="subject-content">
+                            PATHFIT <br>
+                            Mr. Alvir <br>
+                            Frassati Building
+                        </div>
+                    </div>
+                    <div class="right-field">
+                        7:30-9:30
+                    </div>
+                </div>
                 <div class="schedule-item item-1">
                     <div class="left-field">
                         <button class="delete-button" onclick="hideClass('item-1');">❌</button>
                         <div class="subject-logo">💻</div>
                         <div class="subject-content">
-                            ICS2606 <br>
+                            2606 <br>
                             Ms. Dela Cruz <br>
                             Frassati Building
                         </div>
                     </div>
                     <div class="right-field">
-                        10:00
+                        10:00-11:45
                     </div>
                 </div>
                 <div class="schedule-item item-2">
                     <div class="left-field">
                         <button class="delete-button" onclick="hideClass('item-2');">❌</button>
-                        <div class="subject-logo">💻</div>
+                        <div class="subject-logo">📅</div>
                         <div class="subject-content">
-                            ICS2606 <br>
-                            Ms. Dela Cruz <br>
+                            2605 <br>
+                            Mr. Tabs <br>
                             Frassati Building
                         </div>
                     </div>
                     <div class="right-field">
-                        10:00
+                        12:30-1:30
                     </div>
                 </div>
                 <div class="schedule-item item-3">
                     <div class="left-field">
                         <button class="delete-button" onclick="hideClass('item-3');">❌</button>
-                        <div class="subject-logo">💻</div>
+                        <div class="subject-logo">☕</div>
                         <div class="subject-content">
-                            ICS2606 <br>
-                            Ms. Dela Cruz <br>
+                            2602 <br>
+                            Mr. Abilities <br>
                             Frassati Building
                         </div>
                     </div>
                     <div class="right-field">
-                        10:00
+                        14:00-16:00
                     </div>
                 </div>
                 <div class="schedule-item item-4">
                     <div class="left-field">
                         <button class="delete-button" onclick="hideClass('item-4');">❌</button>
-                        <div class="subject-logo">💻</div>
+                        <div class="subject-logo">✈️</div>
                         <div class="subject-content">
-                            ICS2606 <br>
-                            Ms. Dela Cruz <br>
+                            2604 <br>
+                            Mr. Bilas <br>
                             Frassati Building
                         </div>
                     </div>
                     <div class="right-field">
-                        10:00
+                        18:00-22:00
                     </div>
                 </div>
             </div>
